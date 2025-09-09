@@ -1,0 +1,76 @@
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 83168a24-838c-417d-b900-ee6a72e16a73
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message be8d980e-9cd4-4a61-a554-707c551172fa
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message f510ac17-5151-4cb4-9dd5-5abda51e9612
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 4f915dbf-832c-487a-a85c-30cdf3d330c2
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message bc90bcbc-a4c0-4dcf-bd45-8ed444c08958
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 6f9e6c78-3ff4-4e31-a3b2-7e6509fb991a
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 2714a2a5-933f-4be1-8d7a-224b290d29f4
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 87770dda-b38b-4439-b8c1-75766b698944
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message cf348b4b-4069-428e-92b9-ba6be63dcc12
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 195bb0ab-ad4f-4871-a379-28f74e63275e
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 91ec1492-f856-45d8-8167-f51c38905c77
+[92mINFO [0m:      Sent reply
+[92mINFO [0m:      
+[92mINFO [0m:      Received: evaluate message 6e6927f7-3fe6-4ba3-a90b-98299dd4147d
+[92mINFO [0m:      Sent reply
+Traceback (most recent call last):
+  File "/home/rohovyi/DFL/lab1/run_client.py", line 35, in <module>
+    run_client()
+  File "/home/rohovyi/DFL/lab1/run_client.py", line 29, in run_client
+    fl.client.start_client(
+  File "/home/rohovyi/DFL/lab1/.venv/lib/python3.12/site-packages/flwr/client/app.py", line 201, in start_client
+    start_client_internal(
+  File "/home/rohovyi/DFL/lab1/.venv/lib/python3.12/site-packages/flwr/client/app.py", line 438, in start_client_internal
+    message = receive()
+              ^^^^^^^^^
+  File "/home/rohovyi/DFL/lab1/.venv/lib/python3.12/site-packages/flwr/client/grpc_client/connection.py", line 142, in receive
+    proto = next(server_message_iterator)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rohovyi/DFL/lab1/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 543, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/rohovyi/DFL/lab1/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 960, in _next
+    _common.wait(self._state.condition.wait, _response_ready)
+  File "/home/rohovyi/DFL/lab1/.venv/lib/python3.12/site-packages/grpc/_common.py", line 156, in wait
+    _wait_once(wait_fn, MAXIMUM_WAIT_TIMEOUT, spin_cb)
+  File "/home/rohovyi/DFL/lab1/.venv/lib/python3.12/site-packages/grpc/_common.py", line 116, in _wait_once
+    wait_fn(timeout=timeout)
+  File "/usr/lib/python3.12/threading.py", line 359, in wait
+    gotit = waiter.acquire(True, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
