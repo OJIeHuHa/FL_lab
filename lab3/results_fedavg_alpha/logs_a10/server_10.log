@@ -1,0 +1,2023 @@
+/home/rohovyi/DFL/lab3/data_utils.py:28: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments.
+  targets = np.array(full_dataset.targets)
+Number of clients: 10
+Client 0 has 6227 samples
+Client 1 has 4732 samples
+Client 2 has 5656 samples
+Client 3 has 5998 samples
+Client 4 has 6614 samples
+Client 5 has 6448 samples
+Client 6 has 5662 samples
+Client 7 has 6202 samples
+Client 8 has 5940 samples
+Client 9 has 6521 samples
+Generated datasets for 10 clients with alpha=10.0
+Waiting for clients to connect before starting training...
+Starting server on 127.0.0.1:8080 for 50 rounds
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=50, round_timeout=60s
+[92mINFO [0m:      Flower ECE: gRPC server running (50 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+Waiting for clients in round 1: 0/10 connected...
+Waiting for clients in round 1: 0/10 connected...
+Waiting for clients in round 1: 0/10 connected...
+Waiting for clients in round 1: 0/10 connected...
+Waiting for clients in round 1: 0/10 connected...
+[CustomClientManager] Client aaebd550a43745e3b27519357354a7b5 registered.
+[CustomClientManager] Client 3ecfe1f7ce624a2a8707bdca8daeae30 registered.
+Waiting for clients in round 1: 2/10 connected...
+[CustomClientManager] Client 67b964603bd0499aaad9537fd5f832f1 registered.
+[CustomClientManager] Client b166c595e5e5497e99b03454beae01f8 registered.
+[CustomClientManager] Client 552372fc66fe41cdbf75a45079a91f7b registered.
+[CustomClientManager] Client 5da1c5286c3c4428ab310a2b2db1c7a1 registered.
+Waiting for clients in round 1: 6/10 connected...
+[CustomClientManager] Client 83eaaa3dc4634d92aa9d4decdf2c07ed registered.
+[CustomClientManager] Client 3e658ffd12ec454d8ce9b855f5dba58a registered.
+[CustomClientManager] Client f90dc5bb3a314966ac3af73de201303f registered.
+[CustomClientManager] Client 408e4080039e4061b08b3ea72c4c9ab2 registered.
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 1] Fit results from clients:
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 1.4642, Accuracy: 0.5381, Examples: 5216
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 1.4769, Accuracy: 0.5563, Examples: 4752
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 1.4784, Accuracy: 0.5655, Examples: 4981
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 1.5909, Accuracy: 0.5697, Examples: 4529
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 1.4256, Accuracy: 0.5612, Examples: 5291
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 1.5109, Accuracy: 0.5602, Examples: 4798
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 1.5836, Accuracy: 0.5021, Examples: 4524
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 1.5240, Accuracy: 0.5285, Examples: 4961
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 1.6750, Accuracy: 0.5331, Examples: 3785
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 1.4453, Accuracy: 0.5553, Examples: 5158
+[Round 1] Aggregated training metrics: {'loss': 1.511332071996933, 'accuracy': 0.5475431468555753}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 1] Evaluation results from clients:
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 4.6882, Accuracy: 0.7163, Examples: 1188
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 4.3538, Accuracy: 0.6720, Examples: 1305
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 4.2426, Accuracy: 0.7030, Examples: 1246
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 4.7700, Accuracy: 0.6750, Examples: 1200
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 4.4149, Accuracy: 0.7150, Examples: 1323
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 4.6048, Accuracy: 0.6761, Examples: 1133
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 4.8501, Accuracy: 0.6748, Examples: 947
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 4.5415, Accuracy: 0.6798, Examples: 1290
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 4.7828, Accuracy: 0.6656, Examples: 1241
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 5.2824, Accuracy: 0.6396, Examples: 1132
+[Round 1] Aggregated evaluation metrics: {'loss': 4.638597307876466, 'accuracy': 0.6823823406913786}, Aggregated loss: 4.6386
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 2] Fit results from clients:
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 1.4998, Accuracy: 0.7630, Examples: 5216
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 1.6731, Accuracy: 0.7470, Examples: 4524
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 1.5937, Accuracy: 0.7635, Examples: 4961
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 1.5205, Accuracy: 0.7778, Examples: 4981
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 1.5047, Accuracy: 0.7638, Examples: 5158
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 1.7200, Accuracy: 0.7664, Examples: 3785
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 1.5255, Accuracy: 0.7844, Examples: 4752
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 1.5327, Accuracy: 0.7783, Examples: 4798
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 1.4226, Accuracy: 0.7884, Examples: 5291
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 1.6234, Accuracy: 0.7676, Examples: 4529
+[Round 2] Aggregated training metrics: {'loss': 1.5548571906285027, 'accuracy': 0.7703094072299199}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 2] Evaluation results from clients:
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 14.0691, Accuracy: 0.8241, Examples: 1188
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 12.8858, Accuracy: 0.8292, Examples: 1323
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 13.9910, Accuracy: 0.7915, Examples: 1290
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 13.8000, Accuracy: 0.8129, Examples: 1133
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 14.5691, Accuracy: 0.7774, Examples: 1132
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 12.8825, Accuracy: 0.8054, Examples: 1305
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 15.2432, Accuracy: 0.7784, Examples: 1241
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 13.7154, Accuracy: 0.8025, Examples: 947
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 13.6058, Accuracy: 0.8142, Examples: 1200
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 11.9349, Accuracy: 0.8090, Examples: 1246
+[Round 2] Aggregated evaluation metrics: {'loss': 13.64872503832746, 'accuracy': 0.8046647230320699}, Aggregated loss: 13.6487
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 3] Fit results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 7.8649, Accuracy: 0.7935, Examples: 4981
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 8.7308, Accuracy: 0.7925, Examples: 4798
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 8.9388, Accuracy: 0.7924, Examples: 3785
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 8.2503, Accuracy: 0.7875, Examples: 4529
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 8.0485, Accuracy: 0.7679, Examples: 4524
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 8.0358, Accuracy: 0.7996, Examples: 4752
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 8.1353, Accuracy: 0.7757, Examples: 5158
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 7.6258, Accuracy: 0.7844, Examples: 5216
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 7.9149, Accuracy: 0.8078, Examples: 5291
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 7.8054, Accuracy: 0.7809, Examples: 4961
+[Round 3] Aggregated training metrics: {'loss': 8.109186721342166, 'accuracy': 0.7883112824252526}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 3] Evaluation results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 86.1819, Accuracy: 0.7776, Examples: 1241
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 99.6406, Accuracy: 0.7652, Examples: 1133
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 102.0763, Accuracy: 0.7571, Examples: 1132
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 115.7968, Accuracy: 0.7838, Examples: 1323
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 114.0900, Accuracy: 0.7560, Examples: 1246
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 89.4380, Accuracy: 0.7845, Examples: 1290
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 90.0310, Accuracy: 0.7793, Examples: 1305
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 83.1854, Accuracy: 0.8022, Examples: 1188
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 104.0430, Accuracy: 0.7800, Examples: 1200
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 88.6588, Accuracy: 0.7814, Examples: 947
+[Round 3] Aggregated evaluation metrics: {'loss': 97.56364264371047, 'accuracy': 0.7768429820907955}, Aggregated loss: 97.5636
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 4]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 4] Fit results from clients:
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 39.1987, Accuracy: 0.7484, Examples: 4798
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 34.3053, Accuracy: 0.6908, Examples: 5216
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 39.2560, Accuracy: 0.7552, Examples: 5291
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 35.9494, Accuracy: 0.7183, Examples: 4961
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 34.4646, Accuracy: 0.6968, Examples: 4752
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 37.2429, Accuracy: 0.7089, Examples: 5158
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 36.7361, Accuracy: 0.7070, Examples: 4524
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 37.5663, Accuracy: 0.7230, Examples: 4981
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 44.8660, Accuracy: 0.7434, Examples: 3785
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 36.4162, Accuracy: 0.6852, Examples: 4529
+[Round 4] Aggregated training metrics: {'loss': 37.44127843995187, 'accuracy': 0.7175261311942216}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 4] Evaluation results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 347.1155, Accuracy: 0.6463, Examples: 947
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 367.5552, Accuracy: 0.6867, Examples: 1200
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 357.5452, Accuracy: 0.6848, Examples: 1323
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 331.8402, Accuracy: 0.6591, Examples: 1241
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 394.7926, Accuracy: 0.6581, Examples: 1246
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 303.3951, Accuracy: 0.6187, Examples: 1133
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 329.8709, Accuracy: 0.6582, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 294.9535, Accuracy: 0.6194, Examples: 1290
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 319.3983, Accuracy: 0.6902, Examples: 1188
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 331.9702, Accuracy: 0.6184, Examples: 1132
+[Round 4] Aggregated evaluation metrics: {'loss': 337.90051900727804, 'accuracy': 0.6546438983756768}, Aggregated loss: 337.9005
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 5]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 5] Fit results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 113.4269, Accuracy: 0.4508, Examples: 3785
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 98.2830, Accuracy: 0.3902, Examples: 5291
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 154.9652, Accuracy: 0.3591, Examples: 4798
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 87.0699, Accuracy: 0.4294, Examples: 4529
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 76.3791, Accuracy: 0.4263, Examples: 5216
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 78.9876, Accuracy: 0.4465, Examples: 4961
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 96.3196, Accuracy: 0.4012, Examples: 5158
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 82.1330, Accuracy: 0.3651, Examples: 4981
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 85.4685, Accuracy: 0.4298, Examples: 4524
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 75.9099, Accuracy: 0.4237, Examples: 4752
+[Round 5] Aggregated training metrics: {'loss': 94.40052821009044, 'accuracy': 0.41093169427370896}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 5] Evaluation results from clients:
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 565.4455, Accuracy: 0.3101, Examples: 1132
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 626.1194, Accuracy: 0.3023, Examples: 1323
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 638.7911, Accuracy: 0.3408, Examples: 1200
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 661.9160, Accuracy: 0.3333, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 461.1541, Accuracy: 0.2574, Examples: 1290
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 436.0483, Accuracy: 0.2921, Examples: 1133
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 1050.0460, Accuracy: 0.2999, Examples: 947
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 1707.9192, Accuracy: 0.3194, Examples: 1246
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 299.4394, Accuracy: 0.3224, Examples: 1188
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 649.2603, Accuracy: 0.3143, Examples: 1241
+[Round 5] Aggregated evaluation metrics: {'loss': 705.676672810686, 'accuracy': 0.3092877967513536}, Aggregated loss: 705.6767
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 6]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 6] Fit results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 364.2194, Accuracy: 0.1920, Examples: 3785
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 228.3540, Accuracy: 0.1585, Examples: 4529
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 286.4134, Accuracy: 0.1828, Examples: 4981
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 270.5223, Accuracy: 0.1971, Examples: 4961
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 202.8902, Accuracy: 0.2078, Examples: 5158
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 500.1114, Accuracy: 0.2092, Examples: 4524
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 453.4682, Accuracy: 0.1320, Examples: 5291
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 319.5004, Accuracy: 0.1695, Examples: 4752
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 291.8004, Accuracy: 0.2005, Examples: 5216
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 272.4180, Accuracy: 0.1863, Examples: 4798
+[Round 6] Aggregated training metrics: {'loss': 317.4735334404708, 'accuracy': 0.18324825502656528}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 6] Evaluation results from clients:
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: 883.4564, Accuracy: 0.1162, Examples: 1188
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 2831.9504, Accuracy: 0.1391, Examples: 1323
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: 1626.8075, Accuracy: 0.1326, Examples: 1290
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 3152.8347, Accuracy: 0.1395, Examples: 1133
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 887.8907, Accuracy: 0.1652, Examples: 1132
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: 7527.7598, Accuracy: 0.1437, Examples: 1246
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 4243.3179, Accuracy: 0.1708, Examples: 1241
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: 3779.8594, Accuracy: 0.1575, Examples: 1200
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: 7907.2510, Accuracy: 0.1693, Examples: 1305
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: 5128.9072, Accuracy: 0.1415, Examples: 947
+[Round 6] Aggregated evaluation metrics: {'loss': 3817.5316434314477, 'accuracy': 0.1476884631403582}, Aggregated loss: 3817.5316
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 7]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 7] Fit results from clients:
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.1000, Examples: 4798
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0518, Examples: 5216
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1059, Examples: 4752
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: 5201.7709, Accuracy: 0.0994, Examples: 5291
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1160, Examples: 4981
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1272, Examples: 5158
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1194, Examples: 3785
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: 1628.5469, Accuracy: 0.1343, Examples: 4961
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: 2035.4524, Accuracy: 0.1426, Examples: 4524
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: 10019.7217, Accuracy: 0.1012, Examples: 4529
+[Round 7] Aggregated training metrics: {'loss': nan, 'accuracy': 0.10907386186061047}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 7] Evaluation results from clients:
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+[Round 7] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 8]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 8] Fit results from clients:
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 8] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 8] Evaluation results from clients:
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+[Round 8] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 9]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 9] Fit results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 9] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 9] Evaluation results from clients:
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+[Round 9] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 10]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 10] Fit results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+[Round 10] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 10] Evaluation results from clients:
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+[Round 10] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 11]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 11] Fit results from clients:
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+[Round 11] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 11] Evaluation results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+[Round 11] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 12]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 12] Fit results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 12] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 12] Evaluation results from clients:
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+[Round 12] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 13]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 13] Fit results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 13] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 13] Evaluation results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+[Round 13] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 14]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 14] Fit results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+[Round 14] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 14] Evaluation results from clients:
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+[Round 14] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 15]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 15] Fit results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+[Round 15] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 15] Evaluation results from clients:
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+[Round 15] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 16]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 16] Fit results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+[Round 16] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 16] Evaluation results from clients:
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+[Round 16] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 17]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 17] Fit results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+[Round 17] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 17] Evaluation results from clients:
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+[Round 17] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 18]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 18] Fit results from clients:
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 18] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 18] Evaluation results from clients:
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+[Round 18] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 19]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 19] Fit results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+[Round 19] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 19] Evaluation results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+[Round 19] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 20]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 20] Fit results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 20] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 20] Evaluation results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+[Round 20] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 21]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 21] Fit results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+[Round 21] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 21] Evaluation results from clients:
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+[Round 21] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 22]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 22] Fit results from clients:
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+[Round 22] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 22] Evaluation results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+[Round 22] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 23]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 23] Fit results from clients:
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+[Round 23] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 23] Evaluation results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+[Round 23] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 24]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 24] Fit results from clients:
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+[Round 24] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 24] Evaluation results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+[Round 24] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 25]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 25] Fit results from clients:
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+[Round 25] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 25] Evaluation results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+[Round 25] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 26]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 26] Fit results from clients:
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+[Round 26] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 26] Evaluation results from clients:
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+[Round 26] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 27]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 27] Fit results from clients:
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+[Round 27] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 27] Evaluation results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+[Round 27] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 28]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 28] Fit results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+[Round 28] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 28] Evaluation results from clients:
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+[Round 28] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 29]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 29] Fit results from clients:
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+[Round 29] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 29] Evaluation results from clients:
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+[Round 29] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 30]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 30] Fit results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+[Round 30] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 30] Evaluation results from clients:
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+[Round 30] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 31]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 31] Fit results from clients:
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 31] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 31] Evaluation results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+[Round 31] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 32]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 32] Fit results from clients:
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+[Round 32] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 32] Evaluation results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+[Round 32] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 33]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 33] Fit results from clients:
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+[Round 33] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 33] Evaluation results from clients:
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+[Round 33] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 34]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 34] Fit results from clients:
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+[Round 34] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 34] Evaluation results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+[Round 34] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 35]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 35] Fit results from clients:
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+[Round 35] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 35] Evaluation results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+[Round 35] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 36]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 36] Fit results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+[Round 36] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 36] Evaluation results from clients:
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+[Round 36] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 37]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 37] Fit results from clients:
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+[Round 37] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 37] Evaluation results from clients:
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+[Round 37] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 38]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 38] Fit results from clients:
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+[Round 38] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 38] Evaluation results from clients:
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+[Round 38] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 39]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 39] Fit results from clients:
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 39] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 39] Evaluation results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+[Round 39] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 40]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 40] Fit results from clients:
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 40] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 40] Evaluation results from clients:
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+[Round 40] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 41]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 41] Fit results from clients:
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+[Round 41] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 41] Evaluation results from clients:
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+[Round 41] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 42]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 42] Fit results from clients:
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 42] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 42] Evaluation results from clients:
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+[Round 42] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 43]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 43] Fit results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+[Round 43] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 43] Evaluation results from clients:
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+[Round 43] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 44]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 44] Fit results from clients:
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+[Round 44] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 44] Evaluation results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+[Round 44] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 45]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 45] Fit results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 45] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 45] Evaluation results from clients:
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+[Round 45] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 46]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 46] Fit results from clients:
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 46] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 46] Evaluation results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+[Round 46] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 47]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 47] Fit results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+[Round 47] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 47] Evaluation results from clients:
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+[Round 47] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 48]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 48] Fit results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+[Round 48] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 48] Evaluation results from clients:
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+[Round 48] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 49]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 49] Fit results from clients:
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+[Round 49] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 49] Evaluation results from clients:
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+[Round 49] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 50]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 50] Fit results from clients:
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.1129, Examples: 4961
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0919, Examples: 4798
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1176, Examples: 3785
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0422, Examples: 5216
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1136, Examples: 5158
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0928, Examples: 4524
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1391, Examples: 5291
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0903, Examples: 4529
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1092, Examples: 4981
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.0987, Examples: 4752
+[Round 50] Aggregated training metrics: {'loss': nan, 'accuracy': 0.1006354828627982}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 50] Evaluation results from clients:
+ - Client 5da1c5286c3c4428ab310a2b2db1c7a1: Loss: nan, Accuracy: 0.1085, Examples: 1290
+ - Client 67b964603bd0499aaad9537fd5f832f1: Loss: nan, Accuracy: 0.0989, Examples: 1132
+ - Client 552372fc66fe41cdbf75a45079a91f7b: Loss: nan, Accuracy: 0.1361, Examples: 1323
+ - Client 83eaaa3dc4634d92aa9d4decdf2c07ed: Loss: nan, Accuracy: 0.0724, Examples: 1133
+ - Client b166c595e5e5497e99b03454beae01f8: Loss: nan, Accuracy: 0.0758, Examples: 1200
+ - Client aaebd550a43745e3b27519357354a7b5: Loss: nan, Accuracy: 0.1003, Examples: 1246
+ - Client 408e4080039e4061b08b3ea72c4c9ab2: Loss: nan, Accuracy: 0.0521, Examples: 1305
+ - Client f90dc5bb3a314966ac3af73de201303f: Loss: nan, Accuracy: 0.1263, Examples: 1188
+ - Client 3e658ffd12ec454d8ce9b855f5dba58a: Loss: nan, Accuracy: 0.0959, Examples: 1241
+ - Client 3ecfe1f7ce624a2a8707bdca8daeae30: Loss: nan, Accuracy: 0.1088, Examples: 947
+[Round 50] Aggregated evaluation metrics: {'loss': nan, 'accuracy': 0.09745939192003332}, Aggregated loss: nan
+
+[92mINFO [0m:      
+[92mINFO [0m:      [SUMMARY]
+[92mINFO [0m:      Run finished 50 round(s) in 355.47s
+[92mINFO [0m:      	History (loss, distributed):
+[92mINFO [0m:      		round 1: 4.638597307876466
+[92mINFO [0m:      		round 2: 13.64872503832746
+[92mINFO [0m:      		round 3: 97.56364264371047
+[92mINFO [0m:      		round 4: 337.90051900727804
+[92mINFO [0m:      		round 5: 705.676672810686
+[92mINFO [0m:      		round 6: 3817.5316434314477
+[92mINFO [0m:      		round 7: nan
+[92mINFO [0m:      		round 8: nan
+[92mINFO [0m:      		round 9: nan
+[92mINFO [0m:      		round 10: nan
+[92mINFO [0m:      		round 11: nan
+[92mINFO [0m:      		round 12: nan
+[92mINFO [0m:      		round 13: nan
+[92mINFO [0m:      		round 14: nan
+[92mINFO [0m:      		round 15: nan
+[92mINFO [0m:      		round 16: nan
+[92mINFO [0m:      		round 17: nan
+[92mINFO [0m:      		round 18: nan
+[92mINFO [0m:      		round 19: nan
+[92mINFO [0m:      		round 20: nan
+[92mINFO [0m:      		round 21: nan
+[92mINFO [0m:      		round 22: nan
+[92mINFO [0m:      		round 23: nan
+[92mINFO [0m:      		round 24: nan
+[92mINFO [0m:      		round 25: nan
+[92mINFO [0m:      		round 26: nan
+[92mINFO [0m:      		round 27: nan
+[92mINFO [0m:      		round 28: nan
+[92mINFO [0m:      		round 29: nan
+[92mINFO [0m:      		round 30: nan
+[92mINFO [0m:      		round 31: nan
+[92mINFO [0m:      		round 32: nan
+[92mINFO [0m:      		round 33: nan
+[92mINFO [0m:      		round 34: nan
+[92mINFO [0m:      		round 35: nan
+[92mINFO [0m:      		round 36: nan
+[92mINFO [0m:      		round 37: nan
+[92mINFO [0m:      		round 38: nan
+[92mINFO [0m:      		round 39: nan
+[92mINFO [0m:      		round 40: nan
+[92mINFO [0m:      		round 41: nan
+[92mINFO [0m:      		round 42: nan
+[92mINFO [0m:      		round 43: nan
+[92mINFO [0m:      		round 44: nan
+[92mINFO [0m:      		round 45: nan
+[92mINFO [0m:      		round 46: nan
+[92mINFO [0m:      		round 47: nan
+[92mINFO [0m:      		round 48: nan
+[92mINFO [0m:      		round 49: nan
+[92mINFO [0m:      		round 50: nan
+[92mINFO [0m:      	History (metrics, distributed, fit):
+[92mINFO [0m:      	{'accuracy': [(1, 0.5475431468555753),
+[92mINFO [0m:      	              (2, 0.7703094072299199),
+[92mINFO [0m:      	              (3, 0.7883112824252526),
+[92mINFO [0m:      	              (4, 0.7175261311942216),
+[92mINFO [0m:      	              (5, 0.41093169427370896),
+[92mINFO [0m:      	              (6, 0.18324825502656528),
+[92mINFO [0m:      	              (7, 0.10907386186061047),
+[92mINFO [0m:      	              (8, 0.1006354828627982),
+[92mINFO [0m:      	              (9, 0.1006354828627982),
+[92mINFO [0m:      	              (10, 0.1006354828627982),
+[92mINFO [0m:      	              (11, 0.1006354828627982),
+[92mINFO [0m:      	              (12, 0.1006354828627982),
+[92mINFO [0m:      	              (13, 0.1006354828627982),
+[92mINFO [0m:      	              (14, 0.1006354828627982),
+[92mINFO [0m:      	              (15, 0.1006354828627982),
+[92mINFO [0m:      	              (16, 0.1006354828627982),
+[92mINFO [0m:      	              (17, 0.1006354828627982),
+[92mINFO [0m:      	              (18, 0.1006354828627982),
+[92mINFO [0m:      	              (19, 0.1006354828627982),
+[92mINFO [0m:      	              (20, 0.1006354828627982),
+[92mINFO [0m:      	              (21, 0.1006354828627982),
+[92mINFO [0m:      	              (22, 0.1006354828627982),
+[92mINFO [0m:      	              (23, 0.1006354828627982),
+[92mINFO [0m:      	              (24, 0.1006354828627982),
+[92mINFO [0m:      	              (25, 0.1006354828627982),
+[92mINFO [0m:      	              (26, 0.1006354828627982),
+[92mINFO [0m:      	              (27, 0.1006354828627982),
+[92mINFO [0m:      	              (28, 0.1006354828627982),
+[92mINFO [0m:      	              (29, 0.1006354828627982),
+[92mINFO [0m:      	              (30, 0.1006354828627982),
+[92mINFO [0m:      	              (31, 0.1006354828627982),
+[92mINFO [0m:      	              (32, 0.1006354828627982),
+[92mINFO [0m:      	              (33, 0.1006354828627982),
+[92mINFO [0m:      	              (34, 0.1006354828627982),
+[92mINFO [0m:      	              (35, 0.1006354828627982),
+[92mINFO [0m:      	              (36, 0.1006354828627982),
+[92mINFO [0m:      	              (37, 0.1006354828627982),
+[92mINFO [0m:      	              (38, 0.1006354828627982),
+[92mINFO [0m:      	              (39, 0.1006354828627982),
+[92mINFO [0m:      	              (40, 0.1006354828627982),
+[92mINFO [0m:      	              (41, 0.1006354828627982),
+[92mINFO [0m:      	              (42, 0.1006354828627982),
+[92mINFO [0m:      	              (43, 0.1006354828627982),
+[92mINFO [0m:      	              (44, 0.1006354828627982),
+[92mINFO [0m:      	              (45, 0.1006354828627982),
+[92mINFO [0m:      	              (46, 0.1006354828627982),
+[92mINFO [0m:      	              (47, 0.1006354828627982),
+[92mINFO [0m:      	              (48, 0.1006354828627982),
+[92mINFO [0m:      	              (49, 0.1006354828627982),
+[92mINFO [0m:      	              (50, 0.1006354828627982)],
+[92mINFO [0m:      	 'loss': [(1, 1.511332071996933),
+[92mINFO [0m:      	          (2, 1.5548571906285027),
+[92mINFO [0m:      	          (3, 8.109186721342166),
+[92mINFO [0m:      	          (4, 37.44127843995187),
+[92mINFO [0m:      	          (5, 94.40052821009044),
+[92mINFO [0m:      	          (6, 317.4735334404708),
+[92mINFO [0m:      	          (7, nan),
+[92mINFO [0m:      	          (8, nan),
+[92mINFO [0m:      	          (9, nan),
+[92mINFO [0m:      	          (10, nan),
+[92mINFO [0m:      	          (11, nan),
+[92mINFO [0m:      	          (12, nan),
+[92mINFO [0m:      	          (13, nan),
+[92mINFO [0m:      	          (14, nan),
+[92mINFO [0m:      	          (15, nan),
+[92mINFO [0m:      	          (16, nan),
+[92mINFO [0m:      	          (17, nan),
+[92mINFO [0m:      	          (18, nan),
+[92mINFO [0m:      	          (19, nan),
+[92mINFO [0m:      	          (20, nan),
+[92mINFO [0m:      	          (21, nan),
+[92mINFO [0m:      	          (22, nan),
+[92mINFO [0m:      	          (23, nan),
+[92mINFO [0m:      	          (24, nan),
+[92mINFO [0m:      	          (25, nan),
+[92mINFO [0m:      	          (26, nan),
+[92mINFO [0m:      	          (27, nan),
+[92mINFO [0m:      	          (28, nan),
+[92mINFO [0m:      	          (29, nan),
+[92mINFO [0m:      	          (30, nan),
+[92mINFO [0m:      	          (31, nan),
+[92mINFO [0m:      	          (32, nan),
+[92mINFO [0m:      	          (33, nan),
+[92mINFO [0m:      	          (34, nan),
+[92mINFO [0m:      	          (35, nan),
+[92mINFO [0m:      	          (36, nan),
+[92mINFO [0m:      	          (37, nan),
+[92mINFO [0m:      	          (38, nan),
+[92mINFO [0m:      	          (39, nan),
+[92mINFO [0m:      	          (40, nan),
+[92mINFO [0m:      	          (41, nan),
+[92mINFO [0m:      	          (42, nan),
+[92mINFO [0m:      	          (43, nan),
+[92mINFO [0m:      	          (44, nan),
+[92mINFO [0m:      	          (45, nan),
+[92mINFO [0m:      	          (46, nan),
+[92mINFO [0m:      	          (47, nan),
+[92mINFO [0m:      	          (48, nan),
+[92mINFO [0m:      	          (49, nan),
+[92mINFO [0m:      	          (50, nan)]}
+[92mINFO [0m:      	History (metrics, distributed, evaluate):
+[92mINFO [0m:      	{'accuracy': [(1, 0.6823823406913786),
+[92mINFO [0m:      	              (2, 0.8046647230320699),
+[92mINFO [0m:      	              (3, 0.7768429820907955),
+[92mINFO [0m:      	              (4, 0.6546438983756768),
+[92mINFO [0m:      	              (5, 0.3092877967513536),
+[92mINFO [0m:      	              (6, 0.1476884631403582),
+[92mINFO [0m:      	              (7, 0.09745939192003332),
+[92mINFO [0m:      	              (8, 0.09745939192003332),
+[92mINFO [0m:      	              (9, 0.09745939192003332),
+[92mINFO [0m:      	              (10, 0.09745939192003332),
+[92mINFO [0m:      	              (11, 0.09745939192003332),
+[92mINFO [0m:      	              (12, 0.09745939192003332),
+[92mINFO [0m:      	              (13, 0.09745939192003332),
+[92mINFO [0m:      	              (14, 0.09745939192003332),
+[92mINFO [0m:      	              (15, 0.09745939192003332),
+[92mINFO [0m:      	              (16, 0.09745939192003332),
+[92mINFO [0m:      	              (17, 0.09745939192003332),
+[92mINFO [0m:      	              (18, 0.09745939192003332),
+[92mINFO [0m:      	              (19, 0.09745939192003332),
+[92mINFO [0m:      	              (20, 0.09745939192003332),
+[92mINFO [0m:      	              (21, 0.09745939192003332),
+[92mINFO [0m:      	              (22, 0.09745939192003332),
+[92mINFO [0m:      	              (23, 0.09745939192003332),
+[92mINFO [0m:      	              (24, 0.09745939192003332),
+[92mINFO [0m:      	              (25, 0.09745939192003332),
+[92mINFO [0m:      	              (26, 0.09745939192003332),
+[92mINFO [0m:      	              (27, 0.09745939192003332),
+[92mINFO [0m:      	              (28, 0.09745939192003332),
+[92mINFO [0m:      	              (29, 0.09745939192003332),
+[92mINFO [0m:      	              (30, 0.09745939192003332),
+[92mINFO [0m:      	              (31, 0.09745939192003332),
+[92mINFO [0m:      	              (32, 0.09745939192003332),
+[92mINFO [0m:      	              (33, 0.09745939192003332),
+[92mINFO [0m:      	              (34, 0.09745939192003332),
+[92mINFO [0m:      	              (35, 0.09745939192003332),
+[92mINFO [0m:      	              (36, 0.09745939192003332),
+[92mINFO [0m:      	              (37, 0.09745939192003332),
+[92mINFO [0m:      	              (38, 0.09745939192003332),
+[92mINFO [0m:      	              (39, 0.09745939192003332),
+[92mINFO [0m:      	              (40, 0.09745939192003332),
+[92mINFO [0m:      	              (41, 0.09745939192003332),
+[92mINFO [0m:      	              (42, 0.09745939192003332),
+[92mINFO [0m:      	              (43, 0.09745939192003332),
+[92mINFO [0m:      	              (44, 0.09745939192003332),
+[92mINFO [0m:      	              (45, 0.09745939192003332),
+[92mINFO [0m:      	              (46, 0.09745939192003332),
+[92mINFO [0m:      	              (47, 0.09745939192003332),
+[92mINFO [0m:      	              (48, 0.09745939192003332),
+[92mINFO [0m:      	              (49, 0.09745939192003332),
+[92mINFO [0m:      	              (50, 0.09745939192003332)],
+[92mINFO [0m:      	 'loss': [(1, 4.638597307876466),
+[92mINFO [0m:      	          (2, 13.64872503832746),
+[92mINFO [0m:      	          (3, 97.56364264371047),
+[92mINFO [0m:      	          (4, 337.90051900727804),
+[92mINFO [0m:      	          (5, 705.676672810686),
+[92mINFO [0m:      	          (6, 3817.5316434314477),
+[92mINFO [0m:      	          (7, nan),
+[92mINFO [0m:      	          (8, nan),
+[92mINFO [0m:      	          (9, nan),
+[92mINFO [0m:      	          (10, nan),
+[92mINFO [0m:      	          (11, nan),
+[92mINFO [0m:      	          (12, nan),
+[92mINFO [0m:      	          (13, nan),
+[92mINFO [0m:      	          (14, nan),
+[92mINFO [0m:      	          (15, nan),
+[92mINFO [0m:      	          (16, nan),
+[92mINFO [0m:      	          (17, nan),
+[92mINFO [0m:      	          (18, nan),
+[92mINFO [0m:      	          (19, nan),
+[92mINFO [0m:      	          (20, nan),
+[92mINFO [0m:      	          (21, nan),
+[92mINFO [0m:      	          (22, nan),
+[92mINFO [0m:      	          (23, nan),
+[92mINFO [0m:      	          (24, nan),
+[92mINFO [0m:      	          (25, nan),
+[92mINFO [0m:      	          (26, nan),
+[92mINFO [0m:      	          (27, nan),
+[92mINFO [0m:      	          (28, nan),
+[92mINFO [0m:      	          (29, nan),
+[92mINFO [0m:      	          (30, nan),
+[92mINFO [0m:      	          (31, nan),
+[92mINFO [0m:      	          (32, nan),
+[92mINFO [0m:      	          (33, nan),
+[92mINFO [0m:      	          (34, nan),
+[92mINFO [0m:      	          (35, nan),
+[92mINFO [0m:      	          (36, nan),
+[92mINFO [0m:      	          (37, nan),
+[92mINFO [0m:      	          (38, nan),
+[92mINFO [0m:      	          (39, nan),
+[92mINFO [0m:      	          (40, nan),
+[92mINFO [0m:      	          (41, nan),
+[92mINFO [0m:      	          (42, nan),
+[92mINFO [0m:      	          (43, nan),
+[92mINFO [0m:      	          (44, nan),
+[92mINFO [0m:      	          (45, nan),
+[92mINFO [0m:      	          (46, nan),
+[92mINFO [0m:      	          (47, nan),
+[92mINFO [0m:      	          (48, nan),
+[92mINFO [0m:      	          (49, nan),
+[92mINFO [0m:      	          (50, nan)]}
+[92mINFO [0m:      
+[CustomClientManager] Client aaebd550a43745e3b27519357354a7b5 unregistered.
+[CustomClientManager] Client 3ecfe1f7ce624a2a8707bdca8daeae30 unregistered.
+[CustomClientManager] Client 67b964603bd0499aaad9537fd5f832f1 unregistered.
+[CustomClientManager] Client 5da1c5286c3c4428ab310a2b2db1c7a1 unregistered.
+[CustomClientManager] Client b166c595e5e5497e99b03454beae01f8 unregistered.
+[CustomClientManager] Client 552372fc66fe41cdbf75a45079a91f7b unregistered.
+[CustomClientManager] Client 83eaaa3dc4634d92aa9d4decdf2c07ed unregistered.
+[CustomClientManager] Client 3e658ffd12ec454d8ce9b855f5dba58a unregistered.
+[CustomClientManager] Client f90dc5bb3a314966ac3af73de201303f unregistered.
+[CustomClientManager] Client 408e4080039e4061b08b3ea72c4c9ab2 unregistered.
+Saved training history to fl_history.json
+Appended metadata and full eval loss list to plot1.json
+Appended metadata and results to plot2.json

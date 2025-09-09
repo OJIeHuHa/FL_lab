@@ -1,0 +1,2022 @@
+/home/rohovyi/DFL/lab3/data_utils.py:28: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments.
+  targets = np.array(full_dataset.targets)
+Number of clients: 10
+Client 0 has 6227 samples
+Client 1 has 4732 samples
+Client 2 has 5656 samples
+Client 3 has 5998 samples
+Client 4 has 6614 samples
+Client 5 has 6448 samples
+Client 6 has 5662 samples
+Client 7 has 6202 samples
+Client 8 has 5940 samples
+Client 9 has 6521 samples
+Generated datasets for 10 clients with alpha=10.0
+Waiting for clients to connect before starting training...
+Starting server on 127.0.0.1:8080 for 50 rounds
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=50, round_timeout=60s
+[92mINFO [0m:      Flower ECE: gRPC server running (50 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+Waiting for clients in round 1: 0/10 connected...
+Waiting for clients in round 1: 0/10 connected...
+Waiting for clients in round 1: 0/10 connected...
+Waiting for clients in round 1: 0/10 connected...
+Waiting for clients in round 1: 0/10 connected...
+[CustomClientManager] Client 5b26fef113e64ccea57f3de25b7cd1ac registered.
+[CustomClientManager] Client e060b43b6a7049fabd3261b79c380fdb registered.
+[CustomClientManager] Client 0aa3d744a39641c8978d2e5156dac792 registered.
+[CustomClientManager] Client 4abfe0f5ef724f5c97c858fce066e98f registered.
+Waiting for clients in round 1: 4/10 connected...
+[CustomClientManager] Client 038d0a73c72d469f92846bf1baade3cd registered.
+[CustomClientManager] Client 05df5fc648994197b042bc775dcada44 registered.
+[CustomClientManager] Client 96b1573fa49f4e0f99050f376d895102 registered.
+[CustomClientManager] Client 39e0ed040e624e52a868084e82931d1c registered.
+[CustomClientManager] Client 2491293fa8564123b53301a511e990cf registered.
+[CustomClientManager] Client fc99ccad36094b649962fbf4f878472e registered.
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 1] Krum selected client: 96b1573fa49f4e0f99050f376d895102
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.6289, Accuracy: 0.4673, Examples: 4524, Krum Score: 1.4340
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.4780, Accuracy: 0.5094, Examples: 5158, Krum Score: 1.7241
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 1.5654, Accuracy: 0.5348, Examples: 4798, Krum Score: 1.5040
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 1.7141, Accuracy: 0.5178, Examples: 3785, Krum Score: 1.6979
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.5669, Accuracy: 0.5113, Examples: 4961, Krum Score: 1.4154
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 1.5195, Accuracy: 0.5290, Examples: 4752, Krum Score: 1.5648
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 1.4783, Accuracy: 0.5299, Examples: 5291, Krum Score: 1.6348
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 1.5305, Accuracy: 0.5016, Examples: 5216, Krum Score: 1.7620
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 1.5115, Accuracy: 0.5474, Examples: 4981, Krum Score: 1.6962
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.6195, Accuracy: 0.5113, Examples: 4529, Krum Score: 1.3796
+[Round 1] Aggregated training metrics: {'loss': 1.6195223526667923, 'accuracy': 0.5112975638477957}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 1] Evaluation results from clients:
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 1.8952, Accuracy: 0.1602, Examples: 1305
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 1.8436, Accuracy: 0.1531, Examples: 947
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 1.8657, Accuracy: 0.1508, Examples: 1200
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9876, Accuracy: 0.6659, Examples: 1323
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.0540, Accuracy: 0.6396, Examples: 1132
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.1003, Accuracy: 0.6229, Examples: 1241
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0240, Accuracy: 0.6778, Examples: 1133
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.1162, Accuracy: 0.5775, Examples: 1290
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 1.8355, Accuracy: 0.1338, Examples: 1188
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 1.9737, Accuracy: 0.1124, Examples: 1246
+[Round 1] Aggregated evaluation metrics: {'loss': 1.4629617581164922, 'accuracy': 0.3935860058309038}, Aggregated loss: 1.4630
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 2] Krum selected client: 39e0ed040e624e52a868084e82931d1c
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 1.0826, Accuracy: 0.5513, Examples: 5291, Krum Score: 1.2670
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 1.1881, Accuracy: 0.5002, Examples: 3785, Krum Score: 1.2249
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 1.1208, Accuracy: 0.4999, Examples: 4798, Krum Score: 1.1082
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 1.0968, Accuracy: 0.5286, Examples: 4981, Krum Score: 1.0223
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1812, Accuracy: 0.5030, Examples: 4524, Krum Score: 0.9905
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.1211, Accuracy: 0.5171, Examples: 4961, Krum Score: 0.9463
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 1.1056, Accuracy: 0.5213, Examples: 5216, Krum Score: 1.0717
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.1017, Accuracy: 0.5551, Examples: 5158, Krum Score: 1.2378
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.1574, Accuracy: 0.4832, Examples: 4529, Krum Score: 1.0373
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 1.0874, Accuracy: 0.5435, Examples: 4752, Krum Score: 1.0322
+[Round 2] Aggregated training metrics: {'loss': 1.121135712270654, 'accuracy': 0.5171000470335282}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 2] Evaluation results from clients:
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.9872, Accuracy: 0.5533, Examples: 947
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.8894, Accuracy: 0.6413, Examples: 1132
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.8371, Accuracy: 0.6515, Examples: 1323
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.9132, Accuracy: 0.6417, Examples: 1133
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.8760, Accuracy: 0.6656, Examples: 1241
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.8682, Accuracy: 0.6337, Examples: 1305
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.9271, Accuracy: 0.6256, Examples: 1290
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.8116, Accuracy: 0.6877, Examples: 1188
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.9153, Accuracy: 0.5975, Examples: 1200
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.8625, Accuracy: 0.6597, Examples: 1246
+[Round 2] Aggregated evaluation metrics: {'loss': 0.8860649466713186, 'accuracy': 0.6376509787588505}, Aggregated loss: 0.8861
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 3] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.7556, Accuracy: 0.7302, Examples: 4798, Krum Score: 0.7507
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.7429, Accuracy: 0.7391, Examples: 4981, Krum Score: 0.7405
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9207, Accuracy: 0.6390, Examples: 5291, Krum Score: 1.0400
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.9588, Accuracy: 0.6195, Examples: 5158, Krum Score: 1.0549
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.9684, Accuracy: 0.5899, Examples: 4961, Krum Score: 0.9920
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.7737, Accuracy: 0.7339, Examples: 3785, Krum Score: 0.7767
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.0183, Accuracy: 0.5785, Examples: 4524, Krum Score: 0.9041
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.7663, Accuracy: 0.7168, Examples: 5216, Krum Score: 0.7821
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.7260, Accuracy: 0.7436, Examples: 4752, Krum Score: 0.7405
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.9872, Accuracy: 0.5974, Examples: 4529, Krum Score: 0.9098
+[Round 3] Aggregated training metrics: {'loss': 0.7429450433001991, 'accuracy': 0.7391420732115371}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 3] Evaluation results from clients:
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 2.5250, Accuracy: 0.1080, Examples: 1241
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 2.3254, Accuracy: 0.1202, Examples: 1290
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.6783, Accuracy: 0.7616, Examples: 1246
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.7075, Accuracy: 0.7558, Examples: 1200
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.7626, Accuracy: 0.7159, Examples: 947
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.6621, Accuracy: 0.7576, Examples: 1188
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 2.4253, Accuracy: 0.1422, Examples: 1132
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 2.5943, Accuracy: 0.1050, Examples: 1133
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 2.6152, Accuracy: 0.1051, Examples: 1323
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.7314, Accuracy: 0.7188, Examples: 1305
+[Round 3] Aggregated evaluation metrics: {'loss': 1.618944029016626, 'accuracy': 0.4231570179092045}, Aggregated loss: 1.6189
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 4]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 4] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.6936, Accuracy: 0.7491, Examples: 4524, Krum Score: 0.6707
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.6608, Accuracy: 0.7596, Examples: 5158, Krum Score: 0.7264
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.6645, Accuracy: 0.7652, Examples: 4529, Krum Score: 0.6619
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.6587, Accuracy: 0.7600, Examples: 5216, Krum Score: 0.7312
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.6495, Accuracy: 0.7617, Examples: 4961, Krum Score: 0.6915
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.6239, Accuracy: 0.7799, Examples: 4981, Krum Score: 0.6585
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.6159, Accuracy: 0.7811, Examples: 4752, Krum Score: 0.7103
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.6523, Accuracy: 0.7664, Examples: 3785, Krum Score: 0.7166
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.6099, Accuracy: 0.7844, Examples: 5291, Krum Score: 0.7263
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.6393, Accuracy: 0.7727, Examples: 4798, Krum Score: 0.6971
+[Round 4] Aggregated training metrics: {'loss': 0.6239444698557782, 'accuracy': 0.7798969417118383}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 4] Evaluation results from clients:
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.6397, Accuracy: 0.7632, Examples: 1305
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.6119, Accuracy: 0.7817, Examples: 1246
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.6296, Accuracy: 0.7838, Examples: 1133
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.6945, Accuracy: 0.7328, Examples: 947
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.6766, Accuracy: 0.7574, Examples: 1290
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.5731, Accuracy: 0.7997, Examples: 1188
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.6446, Accuracy: 0.7650, Examples: 1132
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.6198, Accuracy: 0.7817, Examples: 1200
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.6720, Accuracy: 0.7591, Examples: 1241
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.5764, Accuracy: 0.7876, Examples: 1323
+[Round 4] Aggregated evaluation metrics: {'loss': 0.6324023360066094, 'accuracy': 0.7719283631820075}, Aggregated loss: 0.6324
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 5]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 5] Krum selected client: 4abfe0f5ef724f5c97c858fce066e98f
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5930, Accuracy: 0.7834, Examples: 3785, Krum Score: 0.7301
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.5590, Accuracy: 0.8005, Examples: 4981, Krum Score: 0.7086
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.5588, Accuracy: 0.8029, Examples: 4752, Krum Score: 0.7198
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9860, Accuracy: 0.5884, Examples: 5291, Krum Score: 1.3005
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0334, Accuracy: 0.5575, Examples: 4961, Krum Score: 1.2410
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.0997, Accuracy: 0.5227, Examples: 4524, Krum Score: 1.1433
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.6028, Accuracy: 0.7751, Examples: 5216, Krum Score: 0.7709
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.5812, Accuracy: 0.7915, Examples: 4798, Krum Score: 0.7072
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0707, Accuracy: 0.5307, Examples: 4529, Krum Score: 1.2499
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0315, Accuracy: 0.5925, Examples: 5158, Krum Score: 1.3592
+[Round 5] Aggregated training metrics: {'loss': 0.58122489348673, 'accuracy': 0.791510351535362}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 5] Evaluation results from clients:
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.6280, Accuracy: 0.7455, Examples: 947
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.5747, Accuracy: 0.8050, Examples: 1246
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5911, Accuracy: 0.7793, Examples: 1305
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 3.0478, Accuracy: 0.1054, Examples: 1290
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 3.5489, Accuracy: 0.0786, Examples: 1323
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 3.3289, Accuracy: 0.0935, Examples: 1241
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 3.5028, Accuracy: 0.0856, Examples: 1133
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 3.2624, Accuracy: 0.1095, Examples: 1132
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.5259, Accuracy: 0.8039, Examples: 1188
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.5630, Accuracy: 0.8000, Examples: 1200
+[Round 5] Aggregated evaluation metrics: {'loss': 1.982694806495541, 'accuracy': 0.4346522282382341}, Aggregated loss: 1.9827
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 6]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 6] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.5223, Accuracy: 0.8117, Examples: 4752, Krum Score: 0.7285
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.5672, Accuracy: 0.8000, Examples: 4529, Krum Score: 0.7123
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5579, Accuracy: 0.7947, Examples: 4961, Krum Score: 0.7344
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5660, Accuracy: 0.7924, Examples: 5216, Krum Score: 0.7434
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.5245, Accuracy: 0.8127, Examples: 4981, Krum Score: 0.6958
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.5672, Accuracy: 0.7933, Examples: 5158, Krum Score: 0.7562
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.5170, Accuracy: 0.8155, Examples: 5291, Krum Score: 0.7339
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5549, Accuracy: 0.7989, Examples: 3785, Krum Score: 0.7073
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.5334, Accuracy: 0.8114, Examples: 4798, Krum Score: 0.7063
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.5967, Accuracy: 0.7808, Examples: 4524, Krum Score: 0.7196
+[Round 6] Aggregated training metrics: {'loss': 0.5244803795140885, 'accuracy': 0.8126882152178277}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 6] Evaluation results from clients:
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.5102, Accuracy: 0.8186, Examples: 1323
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.5128, Accuracy: 0.8300, Examples: 1188
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.5756, Accuracy: 0.7906, Examples: 1132
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.6122, Accuracy: 0.7772, Examples: 947
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.5312, Accuracy: 0.8133, Examples: 1200
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.6087, Accuracy: 0.7752, Examples: 1241
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5529, Accuracy: 0.8008, Examples: 1305
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.5869, Accuracy: 0.7767, Examples: 1290
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.5349, Accuracy: 0.8138, Examples: 1246
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.5499, Accuracy: 0.8094, Examples: 1133
+[Round 6] Aggregated evaluation metrics: {'loss': 0.5561488284611891, 'accuracy': 0.8009995835068722}, Aggregated loss: 0.5561
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 7]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 7] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5270, Accuracy: 0.8103, Examples: 3785, Krum Score: 0.7269
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0532, Accuracy: 0.5553, Examples: 4961, Krum Score: 1.4525
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0484, Accuracy: 0.5954, Examples: 5158, Krum Score: 1.4999
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.5082, Accuracy: 0.8237, Examples: 4798, Krum Score: 0.7277
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0885, Accuracy: 0.5345, Examples: 4529, Krum Score: 1.4175
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4956, Accuracy: 0.8244, Examples: 4752, Krum Score: 0.7461
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4883, Accuracy: 0.8295, Examples: 4981, Krum Score: 0.7382
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5385, Accuracy: 0.8018, Examples: 5216, Krum Score: 0.7894
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1218, Accuracy: 0.5240, Examples: 4524, Krum Score: 1.3737
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9947, Accuracy: 0.5958, Examples: 5291, Krum Score: 1.5322
+[Round 7] Aggregated training metrics: {'loss': 0.5269891065996893, 'accuracy': 0.8103038309114927}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 7] Evaluation results from clients:
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.5456, Accuracy: 0.7942, Examples: 1200
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.5634, Accuracy: 0.7961, Examples: 1246
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 3.7633, Accuracy: 0.0838, Examples: 1241
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.5131, Accuracy: 0.8064, Examples: 1188
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 3.6224, Accuracy: 0.1228, Examples: 1132
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5850, Accuracy: 0.7648, Examples: 1305
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 3.4754, Accuracy: 0.0891, Examples: 1290
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.6041, Accuracy: 0.7677, Examples: 947
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 3.9827, Accuracy: 0.0816, Examples: 1323
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 3.9188, Accuracy: 0.0918, Examples: 1133
+[Round 7] Aggregated evaluation metrics: {'loss': 2.1878411477727226, 'accuracy': 0.4329862557267805}, Aggregated loss: 2.1878
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 8]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 8] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.5480, Accuracy: 0.7970, Examples: 4524, Krum Score: 0.7514
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4726, Accuracy: 0.8351, Examples: 5291, Krum Score: 0.7684
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4793, Accuracy: 0.8295, Examples: 4752, Krum Score: 0.7666
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5114, Accuracy: 0.8133, Examples: 4961, Krum Score: 0.7692
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.5212, Accuracy: 0.8101, Examples: 5158, Krum Score: 0.7843
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.5225, Accuracy: 0.8172, Examples: 4529, Krum Score: 0.7473
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4906, Accuracy: 0.8295, Examples: 4798, Krum Score: 0.7426
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4937, Accuracy: 0.8252, Examples: 3785, Krum Score: 0.7341
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5183, Accuracy: 0.8096, Examples: 5216, Krum Score: 0.7780
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4736, Accuracy: 0.8324, Examples: 4981, Krum Score: 0.7258
+[Round 8] Aggregated training metrics: {'loss': 0.4735888833981445, 'accuracy': 0.8324299002877602}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 8] Evaluation results from clients:
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4956, Accuracy: 0.8266, Examples: 1246
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4652, Accuracy: 0.8392, Examples: 1188
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.5155, Accuracy: 0.8164, Examples: 1133
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5555, Accuracy: 0.7856, Examples: 947
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4800, Accuracy: 0.8246, Examples: 1323
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5837, Accuracy: 0.7889, Examples: 1241
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.5462, Accuracy: 0.7898, Examples: 1132
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4917, Accuracy: 0.8283, Examples: 1200
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.5331, Accuracy: 0.7984, Examples: 1290
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5345, Accuracy: 0.7992, Examples: 1305
+[Round 8] Aggregated evaluation metrics: {'loss': 0.5192171838992539, 'accuracy': 0.8102457309454394}, Aggregated loss: 0.5192
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 9]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 9] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0444, Accuracy: 0.6016, Examples: 5158, Krum Score: 1.5565
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4746, Accuracy: 0.8328, Examples: 4798, Krum Score: 0.7635
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0644, Accuracy: 0.5614, Examples: 4961, Krum Score: 1.5849
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4474, Accuracy: 0.8461, Examples: 4981, Krum Score: 0.7639
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4631, Accuracy: 0.8335, Examples: 4752, Krum Score: 0.7838
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9954, Accuracy: 0.6020, Examples: 5291, Krum Score: 1.5613
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0868, Accuracy: 0.5387, Examples: 4529, Krum Score: 1.6979
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1245, Accuracy: 0.5385, Examples: 4524, Krum Score: 1.5805
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4789, Accuracy: 0.8287, Examples: 3785, Krum Score: 0.7610
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5015, Accuracy: 0.8161, Examples: 5216, Krum Score: 0.8150
+[Round 9] Aggregated training metrics: {'loss': 0.4788504008520336, 'accuracy': 0.8287098194627918}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 9] Evaluation results from clients:
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 4.3599, Accuracy: 0.1005, Examples: 1323
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5622, Accuracy: 0.7701, Examples: 1305
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4962, Accuracy: 0.8157, Examples: 1188
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 3.9152, Accuracy: 0.0907, Examples: 1290
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5617, Accuracy: 0.7994, Examples: 947
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.5130, Accuracy: 0.8033, Examples: 1200
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 4.1082, Accuracy: 0.0927, Examples: 1241
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 3.9559, Accuracy: 0.1360, Examples: 1132
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 4.2628, Accuracy: 0.0953, Examples: 1133
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.5180, Accuracy: 0.8074, Examples: 1246
+[Round 9] Aggregated evaluation metrics: {'loss': 2.360757160633616, 'accuracy': 0.44381507705122863}, Aggregated loss: 2.3608
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 10]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 10] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4390, Accuracy: 0.8487, Examples: 4981, Krum Score: 0.7565
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4531, Accuracy: 0.8377, Examples: 4752, Krum Score: 0.7830
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4919, Accuracy: 0.8245, Examples: 5158, Krum Score: 0.8016
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.5141, Accuracy: 0.8107, Examples: 4524, Krum Score: 0.7885
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4429, Accuracy: 0.8464, Examples: 5291, Krum Score: 0.7823
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4843, Accuracy: 0.8258, Examples: 4961, Krum Score: 0.8060
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4885, Accuracy: 0.8198, Examples: 5216, Krum Score: 0.8142
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4914, Accuracy: 0.8279, Examples: 4529, Krum Score: 0.7748
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4623, Accuracy: 0.8342, Examples: 4798, Krum Score: 0.7696
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4560, Accuracy: 0.8357, Examples: 3785, Krum Score: 0.7446
+[Round 10] Aggregated training metrics: {'loss': 0.4560486167997371, 'accuracy': 0.8356671070013211}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 10] Evaluation results from clients:
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4817, Accuracy: 0.8192, Examples: 1200
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4827, Accuracy: 0.8207, Examples: 1188
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4783, Accuracy: 0.8284, Examples: 1323
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.5770, Accuracy: 0.7756, Examples: 1132
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.5217, Accuracy: 0.8155, Examples: 1133
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.5119, Accuracy: 0.8101, Examples: 1290
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5525, Accuracy: 0.7831, Examples: 1305
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5224, Accuracy: 0.8025, Examples: 947
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4985, Accuracy: 0.8291, Examples: 1246
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5884, Accuracy: 0.7945, Examples: 1241
+[Round 10] Aggregated evaluation metrics: {'loss': 0.5211072300658133, 'accuracy': 0.8081632653061225}, Aggregated loss: 0.5211
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 11]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 11] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1157, Accuracy: 0.5542, Examples: 4524, Krum Score: 1.3246
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4425, Accuracy: 0.8406, Examples: 4752, Krum Score: 0.8284
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9961, Accuracy: 0.6031, Examples: 5291, Krum Score: 1.4510
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4366, Accuracy: 0.8461, Examples: 3785, Krum Score: 0.7726
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4776, Accuracy: 0.8224, Examples: 5216, Krum Score: 0.8534
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0583, Accuracy: 0.5739, Examples: 4961, Krum Score: 1.5056
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0420, Accuracy: 0.6028, Examples: 5158, Krum Score: 1.5296
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0839, Accuracy: 0.5569, Examples: 4529, Krum Score: 1.4438
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4321, Accuracy: 0.8506, Examples: 4981, Krum Score: 0.7913
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4527, Accuracy: 0.8388, Examples: 4798, Krum Score: 0.7990
+[Round 11] Aggregated training metrics: {'loss': 0.4365844379406782, 'accuracy': 0.8461470717745486}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 11] Evaluation results from clients:
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5234, Accuracy: 0.8046, Examples: 1305
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 4.5651, Accuracy: 0.0697, Examples: 1133
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 4.0458, Accuracy: 0.0760, Examples: 1290
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 4.3079, Accuracy: 0.0701, Examples: 1241
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4589, Accuracy: 0.8417, Examples: 1200
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4472, Accuracy: 0.8418, Examples: 1188
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 4.1726, Accuracy: 0.0936, Examples: 1132
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 4.6358, Accuracy: 0.0680, Examples: 1323
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4606, Accuracy: 0.8427, Examples: 1246
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5069, Accuracy: 0.8036, Examples: 947
+[Round 11] Aggregated evaluation metrics: {'loss': 2.450060509677134, 'accuracy': 0.44406497292794667}, Aggregated loss: 2.4501
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 12]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 12] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4438, Accuracy: 0.8424, Examples: 4798, Krum Score: 0.8037
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4745, Accuracy: 0.8289, Examples: 5158, Krum Score: 0.8370
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4970, Accuracy: 0.8176, Examples: 4524, Krum Score: 0.8217
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4252, Accuracy: 0.8517, Examples: 5291, Krum Score: 0.8160
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4167, Accuracy: 0.8509, Examples: 3785, Krum Score: 0.7970
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4260, Accuracy: 0.8508, Examples: 4981, Krum Score: 0.7855
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4666, Accuracy: 0.8319, Examples: 4961, Krum Score: 0.8320
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4746, Accuracy: 0.8346, Examples: 4529, Krum Score: 0.8000
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4353, Accuracy: 0.8422, Examples: 4752, Krum Score: 0.8172
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4682, Accuracy: 0.8271, Examples: 5216, Krum Score: 0.8406
+[Round 12] Aggregated training metrics: {'loss': 0.42600946278048113, 'accuracy': 0.8507662450645787}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 12] Evaluation results from clients:
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5246, Accuracy: 0.8090, Examples: 1241
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4866, Accuracy: 0.8194, Examples: 1290
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5118, Accuracy: 0.8099, Examples: 947
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4356, Accuracy: 0.8466, Examples: 1323
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4376, Accuracy: 0.8467, Examples: 1200
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4459, Accuracy: 0.8507, Examples: 1246
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4722, Accuracy: 0.8341, Examples: 1133
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4140, Accuracy: 0.8577, Examples: 1188
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4785, Accuracy: 0.8230, Examples: 1305
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4961, Accuracy: 0.8163, Examples: 1132
+[Round 12] Aggregated evaluation metrics: {'loss': 0.4692384092820679, 'accuracy': 0.831820074968763}, Aggregated loss: 0.4692
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 13]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 13] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4562, Accuracy: 0.8291, Examples: 5216, Krum Score: 0.8641
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0741, Accuracy: 0.5719, Examples: 4961, Krum Score: 1.3930
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4349, Accuracy: 0.8433, Examples: 4798, Krum Score: 0.8265
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1252, Accuracy: 0.5512, Examples: 4524, Krum Score: 1.3858
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4051, Accuracy: 0.8576, Examples: 4981, Krum Score: 0.8240
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 1.0028, Accuracy: 0.6024, Examples: 5291, Krum Score: 1.4410
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4262, Accuracy: 0.8474, Examples: 4752, Krum Score: 0.8347
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.1020, Accuracy: 0.5546, Examples: 4529, Krum Score: 1.6516
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4123, Accuracy: 0.8528, Examples: 3785, Krum Score: 0.7980
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0556, Accuracy: 0.6007, Examples: 5158, Krum Score: 1.6454
+[Round 13] Aggregated training metrics: {'loss': 0.41228849423818786, 'accuracy': 0.8528401585204755}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 13] Evaluation results from clients:
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4647, Accuracy: 0.8300, Examples: 1200
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5151, Accuracy: 0.8004, Examples: 947
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 4.8464, Accuracy: 0.0559, Examples: 1323
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 4.7764, Accuracy: 0.0644, Examples: 1133
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 4.5548, Accuracy: 0.0604, Examples: 1241
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4287, Accuracy: 0.8476, Examples: 1188
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 4.2494, Accuracy: 0.0752, Examples: 1290
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 4.4102, Accuracy: 0.0839, Examples: 1132
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4732, Accuracy: 0.8323, Examples: 1246
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5128, Accuracy: 0.8092, Examples: 1305
+[Round 13] Aggregated evaluation metrics: {'loss': 2.5625557080252577, 'accuracy': 0.43881715951686795}, Aggregated loss: 2.5626
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 14]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 14] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4041, Accuracy: 0.8581, Examples: 4981, Krum Score: 0.8076
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4507, Accuracy: 0.8322, Examples: 5216, Krum Score: 0.8762
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4200, Accuracy: 0.8493, Examples: 4752, Krum Score: 0.8637
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4806, Accuracy: 0.8238, Examples: 4524, Krum Score: 0.8465
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4104, Accuracy: 0.8576, Examples: 5291, Krum Score: 0.8411
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4608, Accuracy: 0.8401, Examples: 4529, Krum Score: 0.8332
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4512, Accuracy: 0.8367, Examples: 4961, Krum Score: 0.8793
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4300, Accuracy: 0.8442, Examples: 4798, Krum Score: 0.8273
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.3932, Accuracy: 0.8604, Examples: 3785, Krum Score: 0.8061
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4599, Accuracy: 0.8349, Examples: 5158, Krum Score: 0.8618
+[Round 14] Aggregated training metrics: {'loss': 0.39317207540619586, 'accuracy': 0.860413914575077}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 14] Evaluation results from clients:
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.5451, Accuracy: 0.7889, Examples: 1132
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4763, Accuracy: 0.8237, Examples: 947
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5483, Accuracy: 0.8010, Examples: 1241
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4490, Accuracy: 0.8308, Examples: 1188
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4435, Accuracy: 0.8392, Examples: 1200
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4673, Accuracy: 0.8256, Examples: 1290
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4988, Accuracy: 0.8111, Examples: 1133
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4613, Accuracy: 0.8411, Examples: 1246
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4555, Accuracy: 0.8345, Examples: 1323
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5144, Accuracy: 0.7985, Examples: 1305
+[Round 14] Aggregated evaluation metrics: {'loss': 0.48569514773032013, 'accuracy': 0.8195751770095794}, Aggregated loss: 0.4857
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 15]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 15] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4471, Accuracy: 0.8338, Examples: 5216, Krum Score: 0.9030
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4007, Accuracy: 0.8587, Examples: 4981, Krum Score: 0.8412
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.3779, Accuracy: 0.8671, Examples: 3785, Krum Score: 0.8213
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0727, Accuracy: 0.5805, Examples: 4961, Krum Score: 1.8966
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9944, Accuracy: 0.6159, Examples: 5291, Krum Score: 1.6131
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1133, Accuracy: 0.5703, Examples: 4524, Krum Score: 1.6592
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4244, Accuracy: 0.8472, Examples: 4798, Krum Score: 0.8580
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4151, Accuracy: 0.8507, Examples: 4752, Krum Score: 0.8651
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0953, Accuracy: 0.5650, Examples: 4529, Krum Score: 1.7839
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0390, Accuracy: 0.6112, Examples: 5158, Krum Score: 1.7629
+[Round 15] Aggregated training metrics: {'loss': 0.37787744577421273, 'accuracy': 0.867107001321004}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 15] Evaluation results from clients:
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4939, Accuracy: 0.8078, Examples: 947
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 4.6270, Accuracy: 0.0769, Examples: 1132
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 5.0387, Accuracy: 0.0574, Examples: 1133
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 5.0868, Accuracy: 0.0582, Examples: 1323
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 4.4975, Accuracy: 0.0690, Examples: 1290
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4420, Accuracy: 0.8459, Examples: 1246
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 4.7661, Accuracy: 0.0653, Examples: 1241
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4198, Accuracy: 0.8569, Examples: 1188
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4284, Accuracy: 0.8500, Examples: 1200
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4789, Accuracy: 0.8215, Examples: 1305
+[Round 15] Aggregated evaluation metrics: {'loss': 2.6696589270639994, 'accuracy': 0.44381507705122863}, Aggregated loss: 2.6697
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 16]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 16] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4706, Accuracy: 0.8250, Examples: 4524, Krum Score: 0.8804
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4522, Accuracy: 0.8359, Examples: 5158, Krum Score: 0.9068
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4121, Accuracy: 0.8526, Examples: 4752, Krum Score: 0.8821
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4438, Accuracy: 0.8395, Examples: 4961, Krum Score: 0.8960
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4017, Accuracy: 0.8615, Examples: 5291, Krum Score: 0.8767
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.3635, Accuracy: 0.8699, Examples: 3785, Krum Score: 0.8367
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3984, Accuracy: 0.8585, Examples: 4981, Krum Score: 0.8441
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4408, Accuracy: 0.8344, Examples: 5216, Krum Score: 0.9001
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4187, Accuracy: 0.8490, Examples: 4798, Krum Score: 0.8635
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4513, Accuracy: 0.8445, Examples: 4529, Krum Score: 0.8697
+[Round 16] Aggregated training metrics: {'loss': 0.3635045436111278, 'accuracy': 0.8699251431087628}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 16] Evaluation results from clients:
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4076, Accuracy: 0.8544, Examples: 1188
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4448, Accuracy: 0.8459, Examples: 1246
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4704, Accuracy: 0.8314, Examples: 1133
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4780, Accuracy: 0.8173, Examples: 947
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4344, Accuracy: 0.8508, Examples: 1200
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5241, Accuracy: 0.8139, Examples: 1241
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4411, Accuracy: 0.8435, Examples: 1323
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4518, Accuracy: 0.8318, Examples: 1290
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4861, Accuracy: 0.8230, Examples: 1305
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4947, Accuracy: 0.8171, Examples: 1132
+[Round 16] Aggregated evaluation metrics: {'loss': 0.4628404863473526, 'accuracy': 0.8333194502290712}, Aggregated loss: 0.4628
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 17]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 17] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0822, Accuracy: 0.5782, Examples: 4529, Krum Score: 1.7694
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1174, Accuracy: 0.5670, Examples: 4524, Krum Score: 1.4695
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.3519, Accuracy: 0.8756, Examples: 3785, Krum Score: 0.8713
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9952, Accuracy: 0.6238, Examples: 5291, Krum Score: 1.5671
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4081, Accuracy: 0.8541, Examples: 4752, Krum Score: 0.9157
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0609, Accuracy: 0.5859, Examples: 4961, Krum Score: 1.5249
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3965, Accuracy: 0.8611, Examples: 4981, Krum Score: 0.8841
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0506, Accuracy: 0.6118, Examples: 5158, Krum Score: 1.5677
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4367, Accuracy: 0.8370, Examples: 5216, Krum Score: 0.9397
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4149, Accuracy: 0.8518, Examples: 4798, Krum Score: 0.8961
+[Round 17] Aggregated training metrics: {'loss': 0.3519327343848769, 'accuracy': 0.8756494936151475}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 17] Evaluation results from clients:
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 4.8985, Accuracy: 0.0798, Examples: 1241
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 5.2012, Accuracy: 0.0750, Examples: 1133
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4452, Accuracy: 0.8392, Examples: 1188
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5169, Accuracy: 0.8069, Examples: 1305
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 4.6676, Accuracy: 0.0767, Examples: 1290
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 5.3196, Accuracy: 0.0658, Examples: 1323
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4587, Accuracy: 0.8353, Examples: 947
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 4.7315, Accuracy: 0.1025, Examples: 1132
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4372, Accuracy: 0.8383, Examples: 1200
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4433, Accuracy: 0.8435, Examples: 1246
+[Round 17] Aggregated evaluation metrics: {'loss': 2.7573327802236456, 'accuracy': 0.44847980008329863}, Aggregated loss: 2.7573
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 18]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 18] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4318, Accuracy: 0.8389, Examples: 5216, Krum Score: 0.9422
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3958, Accuracy: 0.8605, Examples: 5291, Krum Score: 0.9185
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4434, Accuracy: 0.8480, Examples: 4529, Krum Score: 0.9133
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4365, Accuracy: 0.8421, Examples: 4961, Krum Score: 0.9351
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4058, Accuracy: 0.8542, Examples: 4752, Krum Score: 0.9301
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4132, Accuracy: 0.8502, Examples: 4798, Krum Score: 0.9036
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4450, Accuracy: 0.8404, Examples: 5158, Krum Score: 0.9461
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.3404, Accuracy: 0.8802, Examples: 3785, Krum Score: 0.9014
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3928, Accuracy: 0.8601, Examples: 4981, Krum Score: 0.8950
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4650, Accuracy: 0.8265, Examples: 4524, Krum Score: 0.9277
+[Round 18] Aggregated training metrics: {'loss': 0.3927847651152345, 'accuracy': 0.8600682593856656}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 18] Evaluation results from clients:
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4517, Accuracy: 0.8376, Examples: 1133
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4170, Accuracy: 0.8450, Examples: 1200
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4087, Accuracy: 0.8526, Examples: 1323
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4936, Accuracy: 0.8211, Examples: 1241
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4151, Accuracy: 0.8507, Examples: 1246
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4652, Accuracy: 0.8286, Examples: 1132
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4734, Accuracy: 0.8258, Examples: 947
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4577, Accuracy: 0.8314, Examples: 1305
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3824, Accuracy: 0.8662, Examples: 1188
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4535, Accuracy: 0.8295, Examples: 1290
+[Round 18] Aggregated evaluation metrics: {'loss': 0.4410043190911828, 'accuracy': 0.8391503540191587}, Aggregated loss: 0.4410
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 19]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 19] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9961, Accuracy: 0.6218, Examples: 5291, Krum Score: 1.6434
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0717, Accuracy: 0.5854, Examples: 4961, Krum Score: 1.6813
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0602, Accuracy: 0.6117, Examples: 5158, Krum Score: 1.7960
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3734, Accuracy: 0.8690, Examples: 4981, Krum Score: 0.8839
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1150, Accuracy: 0.5740, Examples: 4524, Krum Score: 1.6720
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.3394, Accuracy: 0.8771, Examples: 3785, Krum Score: 0.8778
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0874, Accuracy: 0.5722, Examples: 4529, Krum Score: 1.6308
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4067, Accuracy: 0.8530, Examples: 4798, Krum Score: 0.9105
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4222, Accuracy: 0.8422, Examples: 5216, Krum Score: 0.9561
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3976, Accuracy: 0.8590, Examples: 4752, Krum Score: 0.9193
+[Round 19] Aggregated training metrics: {'loss': 0.3394190513670366, 'accuracy': 0.8771466314398942}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 19] Evaluation results from clients:
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 4.6534, Accuracy: 0.0806, Examples: 1290
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 5.0636, Accuracy: 0.0774, Examples: 1241
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5091, Accuracy: 0.8215, Examples: 947
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5617, Accuracy: 0.8008, Examples: 1305
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4490, Accuracy: 0.8409, Examples: 1188
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4920, Accuracy: 0.8218, Examples: 1246
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 5.2854, Accuracy: 0.0750, Examples: 1133
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 5.4592, Accuracy: 0.0665, Examples: 1323
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4772, Accuracy: 0.8300, Examples: 1200
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 4.8904, Accuracy: 0.1051, Examples: 1132
+[Round 19] Aggregated evaluation metrics: {'loss': 2.82948114127231, 'accuracy': 0.4443148688046647}, Aggregated loss: 2.8295
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 20]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 20] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4301, Accuracy: 0.8439, Examples: 4961, Krum Score: 0.9505
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3876, Accuracy: 0.8637, Examples: 5291, Krum Score: 0.9285
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4222, Accuracy: 0.8430, Examples: 5216, Krum Score: 0.9610
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3970, Accuracy: 0.8580, Examples: 4752, Krum Score: 0.9495
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.3286, Accuracy: 0.8806, Examples: 3785, Krum Score: 0.9111
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4357, Accuracy: 0.8435, Examples: 5158, Krum Score: 0.9663
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4338, Accuracy: 0.8532, Examples: 4529, Krum Score: 0.9235
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4048, Accuracy: 0.8529, Examples: 4798, Krum Score: 0.9309
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4539, Accuracy: 0.8295, Examples: 4524, Krum Score: 0.9357
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3736, Accuracy: 0.8662, Examples: 4981, Krum Score: 0.8932
+[Round 20] Aggregated training metrics: {'loss': 0.37361982393989135, 'accuracy': 0.8662249882888308}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 20] Evaluation results from clients:
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4129, Accuracy: 0.8488, Examples: 1323
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4107, Accuracy: 0.8612, Examples: 1246
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5097, Accuracy: 0.8163, Examples: 1241
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4536, Accuracy: 0.8353, Examples: 947
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3891, Accuracy: 0.8628, Examples: 1188
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4487, Accuracy: 0.8376, Examples: 1133
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4617, Accuracy: 0.8299, Examples: 1305
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4500, Accuracy: 0.8279, Examples: 1290
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4103, Accuracy: 0.8542, Examples: 1200
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4803, Accuracy: 0.8251, Examples: 1132
+[Round 20] Aggregated evaluation metrics: {'loss': 0.4423047321779139, 'accuracy': 0.8399833402748854}, Aggregated loss: 0.4423
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 21]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 21] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0826, Accuracy: 0.5820, Examples: 4529, Krum Score: 2.0353
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0602, Accuracy: 0.6157, Examples: 5158, Krum Score: 1.7486
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4003, Accuracy: 0.8556, Examples: 4798, Krum Score: 0.9438
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3894, Accuracy: 0.8604, Examples: 4752, Krum Score: 0.9710
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0833, Accuracy: 0.5904, Examples: 4961, Krum Score: 1.7609
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4150, Accuracy: 0.8448, Examples: 5216, Krum Score: 0.9722
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3554, Accuracy: 0.8745, Examples: 4981, Krum Score: 0.9145
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9922, Accuracy: 0.6304, Examples: 5291, Krum Score: 1.7336
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1315, Accuracy: 0.5757, Examples: 4524, Krum Score: 1.6541
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.3281, Accuracy: 0.8839, Examples: 3785, Krum Score: 0.9076
+[Round 21] Aggregated training metrics: {'loss': 0.3280938275253547, 'accuracy': 0.8839277851166886}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 21] Evaluation results from clients:
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4790, Accuracy: 0.8268, Examples: 1305
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 4.8304, Accuracy: 0.0806, Examples: 1290
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 5.6269, Accuracy: 0.0537, Examples: 1323
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4756, Accuracy: 0.8184, Examples: 947
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4235, Accuracy: 0.8467, Examples: 1246
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4247, Accuracy: 0.8525, Examples: 1200
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 5.2372, Accuracy: 0.0701, Examples: 1241
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 5.5909, Accuracy: 0.0627, Examples: 1133
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 5.1454, Accuracy: 0.0742, Examples: 1132
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3972, Accuracy: 0.8620, Examples: 1188
+[Round 21] Aggregated evaluation metrics: {'loss': 2.9086635426226777, 'accuracy': 0.44756351520199916}, Aggregated loss: 2.9087
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 22]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 22] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4275, Accuracy: 0.8457, Examples: 5158, Krum Score: 0.9717
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.3137, Accuracy: 0.8869, Examples: 3785, Krum Score: 0.8949
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3805, Accuracy: 0.8686, Examples: 5291, Krum Score: 0.9504
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4121, Accuracy: 0.8469, Examples: 5216, Krum Score: 0.9807
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4218, Accuracy: 0.8481, Examples: 4961, Krum Score: 0.9718
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3992, Accuracy: 0.8569, Examples: 4798, Krum Score: 0.9371
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4263, Accuracy: 0.8531, Examples: 4529, Krum Score: 0.9369
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3561, Accuracy: 0.8735, Examples: 4981, Krum Score: 0.8957
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3900, Accuracy: 0.8596, Examples: 4752, Krum Score: 0.9393
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4458, Accuracy: 0.8327, Examples: 4524, Krum Score: 0.9572
+[Round 22] Aggregated training metrics: {'loss': 0.31366616619257925, 'accuracy': 0.8869220607661824}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 22] Evaluation results from clients:
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4564, Accuracy: 0.8455, Examples: 1133
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4529, Accuracy: 0.8279, Examples: 947
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4126, Accuracy: 0.8519, Examples: 1323
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3856, Accuracy: 0.8670, Examples: 1188
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4853, Accuracy: 0.8276, Examples: 1241
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4728, Accuracy: 0.8260, Examples: 1132
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4027, Accuracy: 0.8567, Examples: 1200
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4070, Accuracy: 0.8579, Examples: 1246
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4226, Accuracy: 0.8465, Examples: 1290
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4554, Accuracy: 0.8337, Examples: 1305
+[Round 22] Aggregated evaluation metrics: {'loss': 0.43460011542563337, 'accuracy': 0.8444814660558101}, Aggregated loss: 0.4346
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 23]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 23] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0727, Accuracy: 0.5931, Examples: 4529, Krum Score: 2.0278
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3987, Accuracy: 0.8552, Examples: 4798, Krum Score: 0.9817
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0813, Accuracy: 0.5972, Examples: 4961, Krum Score: 1.9965
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0528, Accuracy: 0.6189, Examples: 5158, Krum Score: 1.9895
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3887, Accuracy: 0.8610, Examples: 4752, Krum Score: 0.9999
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4112, Accuracy: 0.8479, Examples: 5216, Krum Score: 1.0180
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9900, Accuracy: 0.6348, Examples: 5291, Krum Score: 1.8373
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1248, Accuracy: 0.5799, Examples: 4524, Krum Score: 1.8285
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3591, Accuracy: 0.8706, Examples: 4981, Krum Score: 0.9552
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.3024, Accuracy: 0.8913, Examples: 3785, Krum Score: 0.9530
+[Round 23] Aggregated training metrics: {'loss': 0.3024132071836359, 'accuracy': 0.8913254073095552}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 23] Evaluation results from clients:
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 5.8089, Accuracy: 0.0635, Examples: 1323
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4448, Accuracy: 0.8405, Examples: 947
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4459, Accuracy: 0.8409, Examples: 1188
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 5.1705, Accuracy: 0.1087, Examples: 1132
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4316, Accuracy: 0.8417, Examples: 1200
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 5.6729, Accuracy: 0.0786, Examples: 1133
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4419, Accuracy: 0.8491, Examples: 1246
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5190, Accuracy: 0.8023, Examples: 1305
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 5.0849, Accuracy: 0.0736, Examples: 1290
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 5.3512, Accuracy: 0.0838, Examples: 1241
+[Round 23] Aggregated evaluation metrics: {'loss': 2.987326015459404, 'accuracy': 0.45022907122032485}, Aggregated loss: 2.9873
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 24]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 24] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3798, Accuracy: 0.8677, Examples: 5291, Krum Score: 0.9947
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2924, Accuracy: 0.8975, Examples: 3785, Krum Score: 0.9536
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4486, Accuracy: 0.8327, Examples: 4524, Krum Score: 1.0102
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3897, Accuracy: 0.8597, Examples: 4752, Krum Score: 0.9980
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4244, Accuracy: 0.8572, Examples: 4529, Krum Score: 0.9836
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4217, Accuracy: 0.8468, Examples: 4961, Krum Score: 1.0111
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3599, Accuracy: 0.8698, Examples: 4981, Krum Score: 0.9484
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4279, Accuracy: 0.8456, Examples: 5158, Krum Score: 1.0213
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4117, Accuracy: 0.8450, Examples: 5216, Krum Score: 1.0169
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3991, Accuracy: 0.8570, Examples: 4798, Krum Score: 0.9815
+[Round 24] Aggregated training metrics: {'loss': 0.35994370116161106, 'accuracy': 0.8697717995047848}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 24] Evaluation results from clients:
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4293, Accuracy: 0.8349, Examples: 1290
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3979, Accuracy: 0.8604, Examples: 1246
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4048, Accuracy: 0.8534, Examples: 1323
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4350, Accuracy: 0.8447, Examples: 1133
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4943, Accuracy: 0.8203, Examples: 1241
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4429, Accuracy: 0.8414, Examples: 1305
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4414, Accuracy: 0.8437, Examples: 947
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4626, Accuracy: 0.8313, Examples: 1132
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3964, Accuracy: 0.8633, Examples: 1200
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3797, Accuracy: 0.8695, Examples: 1188
+[Round 24] Aggregated evaluation metrics: {'loss': 0.4279681916288513, 'accuracy': 0.846314035818409}, Aggregated loss: 0.4280
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 25]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 25] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0529, Accuracy: 0.6221, Examples: 5158, Krum Score: 1.7626
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9990, Accuracy: 0.6367, Examples: 5291, Krum Score: 1.7411
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4032, Accuracy: 0.8499, Examples: 5216, Krum Score: 1.0285
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1327, Accuracy: 0.5805, Examples: 4524, Krum Score: 1.8015
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0794, Accuracy: 0.5938, Examples: 4961, Krum Score: 1.6569
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3392, Accuracy: 0.8806, Examples: 4981, Krum Score: 0.9457
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0886, Accuracy: 0.5940, Examples: 4529, Krum Score: 1.8541
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3917, Accuracy: 0.8607, Examples: 4798, Krum Score: 0.9996
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2964, Accuracy: 0.8948, Examples: 3785, Krum Score: 0.9439
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3828, Accuracy: 0.8631, Examples: 4752, Krum Score: 1.0008
+[Round 25] Aggregated training metrics: {'loss': 0.29635059723030993, 'accuracy': 0.8948480845442536}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 25] Evaluation results from clients:
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 5.2920, Accuracy: 0.0830, Examples: 1132
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4471, Accuracy: 0.8398, Examples: 1305
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 5.8040, Accuracy: 0.0583, Examples: 1133
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 5.1291, Accuracy: 0.0674, Examples: 1290
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4307, Accuracy: 0.8523, Examples: 1246
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3958, Accuracy: 0.8653, Examples: 1188
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 5.4919, Accuracy: 0.0693, Examples: 1241
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 5.8906, Accuracy: 0.0642, Examples: 1323
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4095, Accuracy: 0.8667, Examples: 1200
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4452, Accuracy: 0.8374, Examples: 947
+[Round 25] Aggregated evaluation metrics: {'loss': 3.0233286528277525, 'accuracy': 0.45289462723865054}, Aggregated loss: 3.0233
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 26]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 26] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3415, Accuracy: 0.8778, Examples: 4981, Krum Score: 0.9565
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4375, Accuracy: 0.8357, Examples: 4524, Krum Score: 1.0175
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2842, Accuracy: 0.8983, Examples: 3785, Krum Score: 0.9611
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4226, Accuracy: 0.8499, Examples: 5158, Krum Score: 1.0384
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4137, Accuracy: 0.8500, Examples: 4961, Krum Score: 1.0315
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4182, Accuracy: 0.8592, Examples: 4529, Krum Score: 0.9976
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3906, Accuracy: 0.8588, Examples: 4798, Krum Score: 1.0026
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3731, Accuracy: 0.8679, Examples: 5291, Krum Score: 1.0146
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4032, Accuracy: 0.8512, Examples: 5216, Krum Score: 1.0327
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3826, Accuracy: 0.8655, Examples: 4752, Krum Score: 1.0290
+[Round 26] Aggregated training metrics: {'loss': 0.3415177847110849, 'accuracy': 0.8778023154654354}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 26] Evaluation results from clients:
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4326, Accuracy: 0.8511, Examples: 947
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3943, Accuracy: 0.8636, Examples: 1246
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4536, Accuracy: 0.8368, Examples: 1305
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3826, Accuracy: 0.8678, Examples: 1188
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4680, Accuracy: 0.8242, Examples: 1132
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4971, Accuracy: 0.8268, Examples: 1241
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4153, Accuracy: 0.8442, Examples: 1290
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4016, Accuracy: 0.8571, Examples: 1323
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3964, Accuracy: 0.8592, Examples: 1200
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4319, Accuracy: 0.8491, Examples: 1133
+[Round 26] Aggregated evaluation metrics: {'loss': 0.427018115116824, 'accuracy': 0.8479800083298625}, Aggregated loss: 0.4270
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 27]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 27] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0727, Accuracy: 0.6023, Examples: 4961, Krum Score: 1.7838
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3884, Accuracy: 0.8590, Examples: 4798, Krum Score: 1.0131
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0843, Accuracy: 0.5990, Examples: 4529, Krum Score: 2.0552
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1218, Accuracy: 0.5851, Examples: 4524, Krum Score: 1.7672
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2861, Accuracy: 0.9001, Examples: 3785, Krum Score: 0.9492
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3247, Accuracy: 0.8835, Examples: 4981, Krum Score: 0.9491
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0518, Accuracy: 0.6244, Examples: 5158, Krum Score: 1.9446
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3788, Accuracy: 0.8645, Examples: 4752, Krum Score: 1.0194
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9933, Accuracy: 0.6408, Examples: 5291, Krum Score: 1.8928
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3985, Accuracy: 0.8537, Examples: 5216, Krum Score: 1.0358
+[Round 27] Aggregated training metrics: {'loss': 0.3247200106919103, 'accuracy': 0.8834905976042293}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 27] Evaluation results from clients:
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 5.5792, Accuracy: 0.0669, Examples: 1241
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3977, Accuracy: 0.8660, Examples: 1246
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 5.8256, Accuracy: 0.0609, Examples: 1133
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3753, Accuracy: 0.8687, Examples: 1188
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 5.9696, Accuracy: 0.0559, Examples: 1323
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3984, Accuracy: 0.8625, Examples: 1200
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 5.1497, Accuracy: 0.0682, Examples: 1290
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 5.3873, Accuracy: 0.0910, Examples: 1132
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4405, Accuracy: 0.8501, Examples: 947
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4537, Accuracy: 0.8330, Examples: 1305
+[Round 27] Aggregated evaluation metrics: {'loss': 3.0480753230283977, 'accuracy': 0.4543940024989588}, Aggregated loss: 3.0481
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 28]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 28] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3672, Accuracy: 0.8727, Examples: 5291, Krum Score: 1.0258
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4277, Accuracy: 0.8394, Examples: 4524, Krum Score: 1.0315
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3865, Accuracy: 0.8621, Examples: 4798, Krum Score: 1.0231
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3098, Accuracy: 0.8900, Examples: 4981, Krum Score: 0.9584
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3947, Accuracy: 0.8548, Examples: 5216, Krum Score: 1.0424
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4075, Accuracy: 0.8536, Examples: 4961, Krum Score: 1.0537
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4139, Accuracy: 0.8511, Examples: 5158, Krum Score: 1.0522
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4103, Accuracy: 0.8599, Examples: 4529, Krum Score: 1.0116
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3765, Accuracy: 0.8685, Examples: 4752, Krum Score: 1.0314
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2888, Accuracy: 0.9004, Examples: 3785, Krum Score: 0.9829
+[Round 28] Aggregated training metrics: {'loss': 0.30976329658102947, 'accuracy': 0.8899819313390885}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 28] Evaluation results from clients:
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4718, Accuracy: 0.8269, Examples: 1132
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4256, Accuracy: 0.8403, Examples: 1290
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3758, Accuracy: 0.8737, Examples: 1188
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4469, Accuracy: 0.8517, Examples: 1133
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3903, Accuracy: 0.8628, Examples: 1246
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3933, Accuracy: 0.8602, Examples: 1323
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4568, Accuracy: 0.8291, Examples: 1305
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4877, Accuracy: 0.8372, Examples: 1241
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4008, Accuracy: 0.8583, Examples: 1200
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4452, Accuracy: 0.8416, Examples: 947
+[Round 28] Aggregated evaluation metrics: {'loss': 0.4286880157630377, 'accuracy': 0.8483132028321533}, Aggregated loss: 0.4287
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 29]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 29] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2926, Accuracy: 0.8955, Examples: 3785, Krum Score: 0.9627
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0675, Accuracy: 0.6146, Examples: 4529, Krum Score: 2.1324
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3910, Accuracy: 0.8553, Examples: 5216, Krum Score: 1.0600
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0427, Accuracy: 0.6367, Examples: 5158, Krum Score: 1.9159
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9863, Accuracy: 0.6475, Examples: 5291, Krum Score: 1.8745
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3753, Accuracy: 0.8652, Examples: 4752, Krum Score: 1.0437
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1126, Accuracy: 0.5897, Examples: 4524, Krum Score: 1.8615
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2972, Accuracy: 0.8965, Examples: 4981, Krum Score: 0.9676
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0601, Accuracy: 0.6102, Examples: 4961, Krum Score: 1.8441
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3853, Accuracy: 0.8624, Examples: 4798, Krum Score: 1.0417
+[Round 29] Aggregated training metrics: {'loss': 0.2926213451566438, 'accuracy': 0.8954645530603257}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 29] Evaluation results from clients:
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 6.0577, Accuracy: 0.0514, Examples: 1323
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3835, Accuracy: 0.8683, Examples: 1200
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 5.5005, Accuracy: 0.0680, Examples: 1132
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 5.9721, Accuracy: 0.0556, Examples: 1133
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 5.6539, Accuracy: 0.0629, Examples: 1241
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4352, Accuracy: 0.8467, Examples: 1305
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4396, Accuracy: 0.8427, Examples: 947
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3947, Accuracy: 0.8612, Examples: 1246
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3711, Accuracy: 0.8788, Examples: 1188
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 5.2078, Accuracy: 0.0682, Examples: 1290
+[Round 29] Aggregated evaluation metrics: {'loss': 3.0919579307842335, 'accuracy': 0.4528113286130779}, Aggregated loss: 3.0920
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 30]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 30] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3908, Accuracy: 0.8545, Examples: 5216, Krum Score: 1.0650
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2750, Accuracy: 0.9036, Examples: 3785, Krum Score: 0.9746
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3832, Accuracy: 0.8638, Examples: 4798, Krum Score: 1.0326
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4030, Accuracy: 0.8550, Examples: 4961, Krum Score: 1.0783
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3752, Accuracy: 0.8669, Examples: 4752, Krum Score: 1.0729
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3633, Accuracy: 0.8733, Examples: 5291, Krum Score: 1.0495
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2988, Accuracy: 0.8930, Examples: 4981, Krum Score: 0.9708
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4138, Accuracy: 0.8518, Examples: 5158, Krum Score: 1.0784
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4268, Accuracy: 0.8398, Examples: 4524, Krum Score: 1.0648
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4084, Accuracy: 0.8616, Examples: 4529, Krum Score: 1.0336
+[Round 30] Aggregated training metrics: {'loss': 0.298753735870432, 'accuracy': 0.8929933748243325}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 30] Evaluation results from clients:
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4891, Accuracy: 0.8292, Examples: 1241
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3681, Accuracy: 0.8746, Examples: 1188
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4462, Accuracy: 0.8429, Examples: 1305
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4267, Accuracy: 0.8517, Examples: 1133
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4402, Accuracy: 0.8469, Examples: 947
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3920, Accuracy: 0.8608, Examples: 1200
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4109, Accuracy: 0.8465, Examples: 1290
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3889, Accuracy: 0.8660, Examples: 1246
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4499, Accuracy: 0.8304, Examples: 1132
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3920, Accuracy: 0.8609, Examples: 1323
+[Round 30] Aggregated evaluation metrics: {'loss': 0.4198038888767033, 'accuracy': 0.8511453561016243}, Aggregated loss: 0.4198
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 31]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 31] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2846, Accuracy: 0.8994, Examples: 4981, Krum Score: 0.9895
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2803, Accuracy: 0.8985, Examples: 3785, Krum Score: 0.9959
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1066, Accuracy: 0.5933, Examples: 4524, Krum Score: 1.8516
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3726, Accuracy: 0.8669, Examples: 4752, Krum Score: 1.0647
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0412, Accuracy: 0.6342, Examples: 5158, Krum Score: 1.8191
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0634, Accuracy: 0.6130, Examples: 4961, Krum Score: 1.7517
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9829, Accuracy: 0.6523, Examples: 5291, Krum Score: 1.8098
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3888, Accuracy: 0.8563, Examples: 5216, Krum Score: 1.0916
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3823, Accuracy: 0.8641, Examples: 4798, Krum Score: 1.0619
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0688, Accuracy: 0.6122, Examples: 4529, Krum Score: 2.0856
+[Round 31] Aggregated training metrics: {'loss': 0.2846451241485383, 'accuracy': 0.8993508666265141}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 31] Evaluation results from clients:
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 6.1257, Accuracy: 0.0591, Examples: 1133
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4457, Accuracy: 0.8429, Examples: 1305
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3850, Accuracy: 0.8668, Examples: 1246
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3744, Accuracy: 0.8712, Examples: 1188
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4296, Accuracy: 0.8522, Examples: 947
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 5.6110, Accuracy: 0.0830, Examples: 1132
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3859, Accuracy: 0.8650, Examples: 1200
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 5.8628, Accuracy: 0.0645, Examples: 1241
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 6.2642, Accuracy: 0.0590, Examples: 1323
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 5.4452, Accuracy: 0.0682, Examples: 1290
+[Round 31] Aggregated evaluation metrics: {'loss': 3.186648388881576, 'accuracy': 0.4553935860058309}, Aggregated loss: 3.1866
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 32]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 32] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2836, Accuracy: 0.8979, Examples: 3785, Krum Score: 1.0040
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4250, Accuracy: 0.8432, Examples: 4524, Krum Score: 1.0921
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4005, Accuracy: 0.8558, Examples: 4961, Krum Score: 1.1075
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3869, Accuracy: 0.8552, Examples: 5216, Krum Score: 1.1053
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3639, Accuracy: 0.8724, Examples: 5291, Krum Score: 1.0729
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4097, Accuracy: 0.8523, Examples: 5158, Krum Score: 1.1216
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3704, Accuracy: 0.8699, Examples: 4752, Krum Score: 1.0839
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3827, Accuracy: 0.8638, Examples: 4798, Krum Score: 1.0697
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4059, Accuracy: 0.8614, Examples: 4529, Krum Score: 1.0604
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2752, Accuracy: 0.9036, Examples: 4981, Krum Score: 0.9929
+[Round 32] Aggregated training metrics: {'loss': 0.2752279131380037, 'accuracy': 0.9036338084721942}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 32] Evaluation results from clients:
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3789, Accuracy: 0.8695, Examples: 1188
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4123, Accuracy: 0.8567, Examples: 1200
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4705, Accuracy: 0.8251, Examples: 1132
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5133, Accuracy: 0.8300, Examples: 1241
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4628, Accuracy: 0.8363, Examples: 947
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4079, Accuracy: 0.8628, Examples: 1246
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4538, Accuracy: 0.8411, Examples: 1133
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4123, Accuracy: 0.8579, Examples: 1323
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4305, Accuracy: 0.8341, Examples: 1290
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4682, Accuracy: 0.8368, Examples: 1305
+[Round 32] Aggregated evaluation metrics: {'loss': 0.44041540433297005, 'accuracy': 0.8453144523115369}, Aggregated loss: 0.4404
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 33]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 33] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3728, Accuracy: 0.8694, Examples: 4752, Krum Score: 1.1031
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.1038, Accuracy: 0.6015, Examples: 4524, Krum Score: 1.7444
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0590, Accuracy: 0.6171, Examples: 4961, Krum Score: 1.7798
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2645, Accuracy: 0.9064, Examples: 4981, Krum Score: 1.0188
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9737, Accuracy: 0.6580, Examples: 5291, Krum Score: 1.8273
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2864, Accuracy: 0.8974, Examples: 3785, Krum Score: 1.0070
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0791, Accuracy: 0.6175, Examples: 4529, Krum Score: 1.7871
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3881, Accuracy: 0.8564, Examples: 5216, Krum Score: 1.1233
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3807, Accuracy: 0.8639, Examples: 4798, Krum Score: 1.0996
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0321, Accuracy: 0.6433, Examples: 5158, Krum Score: 1.8828
+[Round 33] Aggregated training metrics: {'loss': 0.28640825885053983, 'accuracy': 0.8974020255394098}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 33] Evaluation results from clients:
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4431, Accuracy: 0.8427, Examples: 947
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 5.8812, Accuracy: 0.0596, Examples: 1241
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 6.2163, Accuracy: 0.0609, Examples: 1133
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4269, Accuracy: 0.8490, Examples: 1305
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 5.3618, Accuracy: 0.0713, Examples: 1290
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 6.2915, Accuracy: 0.0537, Examples: 1323
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 5.7259, Accuracy: 0.0654, Examples: 1132
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3782, Accuracy: 0.8733, Examples: 1200
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3903, Accuracy: 0.8547, Examples: 1246
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3585, Accuracy: 0.8822, Examples: 1188
+[Round 33] Aggregated evaluation metrics: {'loss': 3.199218261716069, 'accuracy': 0.45372761349437735}, Aggregated loss: 3.1992
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 34]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 34] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2672, Accuracy: 0.9036, Examples: 3785, Krum Score: 1.0284
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3796, Accuracy: 0.8646, Examples: 4798, Krum Score: 1.1020
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3702, Accuracy: 0.8670, Examples: 4752, Krum Score: 1.1239
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4027, Accuracy: 0.8644, Examples: 4529, Krum Score: 1.0819
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2682, Accuracy: 0.9039, Examples: 4981, Krum Score: 1.0193
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4067, Accuracy: 0.8559, Examples: 5158, Krum Score: 1.1576
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3592, Accuracy: 0.8760, Examples: 5291, Krum Score: 1.0988
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.3974, Accuracy: 0.8587, Examples: 4961, Krum Score: 1.1335
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4221, Accuracy: 0.8425, Examples: 4524, Krum Score: 1.1223
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3854, Accuracy: 0.8578, Examples: 5216, Krum Score: 1.1275
+[Round 34] Aggregated training metrics: {'loss': 0.26823190097938715, 'accuracy': 0.9039014923375494}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 34] Evaluation results from clients:
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4398, Accuracy: 0.8508, Examples: 1133
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4498, Accuracy: 0.8444, Examples: 1305
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3975, Accuracy: 0.8625, Examples: 1200
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3870, Accuracy: 0.8692, Examples: 1246
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4917, Accuracy: 0.8292, Examples: 1241
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4238, Accuracy: 0.8395, Examples: 1290
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3645, Accuracy: 0.8796, Examples: 1188
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3883, Accuracy: 0.8632, Examples: 1323
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4529, Accuracy: 0.8375, Examples: 1132
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4504, Accuracy: 0.8405, Examples: 947
+[Round 34] Aggregated evaluation metrics: {'loss': 0.42376010373501616, 'accuracy': 0.8518950437317784}, Aggregated loss: 0.4238
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 35]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 35] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9761, Accuracy: 0.6619, Examples: 5291, Krum Score: 1.8594
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.0930, Accuracy: 0.6086, Examples: 4524, Krum Score: 1.9076
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0679, Accuracy: 0.6231, Examples: 4529, Krum Score: 1.9730
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0502, Accuracy: 0.6221, Examples: 4961, Krum Score: 1.8415
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3693, Accuracy: 0.8683, Examples: 4752, Krum Score: 1.1606
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3781, Accuracy: 0.8674, Examples: 4798, Krum Score: 1.1352
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0265, Accuracy: 0.6473, Examples: 5158, Krum Score: 1.8825
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2540, Accuracy: 0.9117, Examples: 4981, Krum Score: 1.0439
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2720, Accuracy: 0.9040, Examples: 3785, Krum Score: 1.0394
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3832, Accuracy: 0.8608, Examples: 5216, Krum Score: 1.1431
+[Round 35] Aggregated training metrics: {'loss': 0.27197673945752915, 'accuracy': 0.9040070453544694}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 35] Evaluation results from clients:
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 5.8899, Accuracy: 0.0775, Examples: 1290
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4584, Accuracy: 0.8475, Examples: 1200
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5153, Accuracy: 0.8268, Examples: 947
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.5204, Accuracy: 0.8130, Examples: 1305
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 6.1403, Accuracy: 0.0790, Examples: 1241
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 6.2768, Accuracy: 0.0688, Examples: 1133
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.4461, Accuracy: 0.8434, Examples: 1188
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 6.4710, Accuracy: 0.0831, Examples: 1323
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 5.7997, Accuracy: 0.0866, Examples: 1132
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4638, Accuracy: 0.8387, Examples: 1246
+[Round 35] Aggregated evaluation metrics: {'loss': 3.355369380249276, 'accuracy': 0.44914618908788007}, Aggregated loss: 3.3554
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 36]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 36] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.3972, Accuracy: 0.8576, Examples: 4961, Krum Score: 1.1656
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3791, Accuracy: 0.8640, Examples: 4798, Krum Score: 1.1352
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2610, Accuracy: 0.9074, Examples: 4981, Krum Score: 1.0328
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2531, Accuracy: 0.9093, Examples: 3785, Krum Score: 1.0350
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3806, Accuracy: 0.8574, Examples: 5216, Krum Score: 1.1448
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3588, Accuracy: 0.8744, Examples: 5291, Krum Score: 1.1386
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4008, Accuracy: 0.8641, Examples: 4529, Krum Score: 1.1098
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3695, Accuracy: 0.8662, Examples: 4752, Krum Score: 1.1431
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4076, Accuracy: 0.8546, Examples: 5158, Krum Score: 1.1802
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4215, Accuracy: 0.8440, Examples: 4524, Krum Score: 1.1431
+[Round 36] Aggregated training metrics: {'loss': 0.26098548551583994, 'accuracy': 0.9073813825871646}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 36] Evaluation results from clients:
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4293, Accuracy: 0.8596, Examples: 947
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4467, Accuracy: 0.8452, Examples: 1305
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4342, Accuracy: 0.8597, Examples: 1133
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4570, Accuracy: 0.8383, Examples: 1132
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3949, Accuracy: 0.8602, Examples: 1323
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4845, Accuracy: 0.8364, Examples: 1241
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3687, Accuracy: 0.8737, Examples: 1188
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3859, Accuracy: 0.8617, Examples: 1200
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.3929, Accuracy: 0.8535, Examples: 1290
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3789, Accuracy: 0.8756, Examples: 1246
+[Round 36] Aggregated evaluation metrics: {'loss': 0.4166991531253109, 'accuracy': 0.8563098708871304}, Aggregated loss: 0.4167
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 37]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 37] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9726, Accuracy: 0.6694, Examples: 5291, Krum Score: 1.9065
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2594, Accuracy: 0.9083, Examples: 3785, Krum Score: 1.0486
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.0947, Accuracy: 0.6080, Examples: 4524, Krum Score: 1.8671
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0507, Accuracy: 0.6273, Examples: 4961, Krum Score: 1.9020
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3679, Accuracy: 0.8685, Examples: 4752, Krum Score: 1.1870
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3834, Accuracy: 0.8595, Examples: 5216, Krum Score: 1.1800
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0318, Accuracy: 0.6520, Examples: 5158, Krum Score: 1.9169
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2456, Accuracy: 0.9151, Examples: 4981, Krum Score: 1.0590
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3785, Accuracy: 0.8673, Examples: 4798, Krum Score: 1.1622
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0535, Accuracy: 0.6299, Examples: 4529, Krum Score: 2.0773
+[Round 37] Aggregated training metrics: {'loss': 0.2593895887656655, 'accuracy': 0.9083223249669748}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 37] Evaluation results from clients:
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 6.4506, Accuracy: 0.0583, Examples: 1133
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4205, Accuracy: 0.8585, Examples: 947
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3893, Accuracy: 0.8676, Examples: 1246
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 5.8786, Accuracy: 0.0848, Examples: 1132
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 6.1190, Accuracy: 0.0709, Examples: 1241
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 6.6086, Accuracy: 0.0574, Examples: 1323
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 5.7385, Accuracy: 0.0628, Examples: 1290
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4735, Accuracy: 0.8307, Examples: 1305
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3946, Accuracy: 0.8658, Examples: 1200
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3899, Accuracy: 0.8721, Examples: 1188
+[Round 37] Aggregated evaluation metrics: {'loss': 3.3436578093469764, 'accuracy': 0.45481049562682213}, Aggregated loss: 3.3437
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 38]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 38] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.3960, Accuracy: 0.8563, Examples: 4961, Krum Score: 1.1991
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4183, Accuracy: 0.8432, Examples: 4524, Krum Score: 1.1750
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3599, Accuracy: 0.8751, Examples: 5291, Krum Score: 1.1756
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2496, Accuracy: 0.9122, Examples: 4981, Krum Score: 1.0555
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3774, Accuracy: 0.8657, Examples: 4798, Krum Score: 1.1621
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4035, Accuracy: 0.8645, Examples: 4529, Krum Score: 1.1529
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2444, Accuracy: 0.9144, Examples: 3785, Krum Score: 1.0800
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3678, Accuracy: 0.8688, Examples: 4752, Krum Score: 1.1707
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3799, Accuracy: 0.8601, Examples: 5216, Krum Score: 1.1878
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4052, Accuracy: 0.8580, Examples: 5158, Krum Score: 1.2070
+[Round 38] Aggregated training metrics: {'loss': 0.24961359622702975, 'accuracy': 0.9121996921635548}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 38] Evaluation results from clients:
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3791, Accuracy: 0.8652, Examples: 1246
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4382, Accuracy: 0.8410, Examples: 1132
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3827, Accuracy: 0.8692, Examples: 1200
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4350, Accuracy: 0.8553, Examples: 947
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4316, Accuracy: 0.8570, Examples: 1133
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3556, Accuracy: 0.8822, Examples: 1188
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.3984, Accuracy: 0.8543, Examples: 1290
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4712, Accuracy: 0.8413, Examples: 1241
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3826, Accuracy: 0.8624, Examples: 1323
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4394, Accuracy: 0.8475, Examples: 1305
+[Round 38] Aggregated evaluation metrics: {'loss': 0.4106041365069978, 'accuracy': 0.8575593502707205}, Aggregated loss: 0.4106
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 39]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 39] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3753, Accuracy: 0.8678, Examples: 4798, Krum Score: 1.1809
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.0976, Accuracy: 0.6113, Examples: 4524, Krum Score: 1.8579
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0283, Accuracy: 0.6530, Examples: 5158, Krum Score: 1.9820
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3669, Accuracy: 0.8671, Examples: 4752, Krum Score: 1.1927
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2342, Accuracy: 0.9180, Examples: 4981, Krum Score: 1.0666
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3814, Accuracy: 0.8616, Examples: 5216, Krum Score: 1.2026
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0564, Accuracy: 0.6342, Examples: 4529, Krum Score: 1.8038
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9639, Accuracy: 0.6709, Examples: 5291, Krum Score: 1.9635
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0353, Accuracy: 0.6329, Examples: 4961, Krum Score: 1.7994
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2502, Accuracy: 0.9135, Examples: 3785, Krum Score: 1.0646
+[Round 39] Aggregated training metrics: {'loss': 0.2502214216388096, 'accuracy': 0.913518273888155}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 39] Evaluation results from clients:
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 6.5604, Accuracy: 0.0556, Examples: 1133
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4334, Accuracy: 0.8574, Examples: 947
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3985, Accuracy: 0.8628, Examples: 1246
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4004, Accuracy: 0.8650, Examples: 1200
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4800, Accuracy: 0.8291, Examples: 1305
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 6.7178, Accuracy: 0.0537, Examples: 1323
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3856, Accuracy: 0.8746, Examples: 1188
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 6.0122, Accuracy: 0.0848, Examples: 1132
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 6.2212, Accuracy: 0.0653, Examples: 1241
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 5.7295, Accuracy: 0.0643, Examples: 1290
+[Round 39] Aggregated evaluation metrics: {'loss': 3.391067466505961, 'accuracy': 0.45314452311536857}, Aggregated loss: 3.3911
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 40]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 40] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2389, Accuracy: 0.9160, Examples: 4981, Krum Score: 1.0752
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4215, Accuracy: 0.8428, Examples: 4524, Krum Score: 1.1975
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3777, Accuracy: 0.8669, Examples: 4798, Krum Score: 1.1928
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.3994, Accuracy: 0.8666, Examples: 4529, Krum Score: 1.1684
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3786, Accuracy: 0.8606, Examples: 5216, Krum Score: 1.2142
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3586, Accuracy: 0.8760, Examples: 5291, Krum Score: 1.1974
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2343, Accuracy: 0.9201, Examples: 3785, Krum Score: 1.0774
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.3948, Accuracy: 0.8574, Examples: 4961, Krum Score: 1.2331
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3674, Accuracy: 0.8654, Examples: 4752, Krum Score: 1.2131
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4090, Accuracy: 0.8589, Examples: 5158, Krum Score: 1.2474
+[Round 40] Aggregated training metrics: {'loss': 0.2388972381962149, 'accuracy': 0.9160141872448638}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 40] Evaluation results from clients:
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4985, Accuracy: 0.8348, Examples: 1241
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4619, Accuracy: 0.8375, Examples: 1132
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3792, Accuracy: 0.8740, Examples: 1246
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3712, Accuracy: 0.8746, Examples: 1188
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4303, Accuracy: 0.8597, Examples: 1133
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.3996, Accuracy: 0.8566, Examples: 1290
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3922, Accuracy: 0.8594, Examples: 1323
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4522, Accuracy: 0.8421, Examples: 1305
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4245, Accuracy: 0.8585, Examples: 947
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3872, Accuracy: 0.8708, Examples: 1200
+[Round 40] Aggregated evaluation metrics: {'loss': 0.4193025190077539, 'accuracy': 0.8567263640149938}, Aggregated loss: 0.4193
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 41]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 41] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2383, Accuracy: 0.9184, Examples: 3785, Krum Score: 1.0834
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3684, Accuracy: 0.8676, Examples: 4752, Krum Score: 1.2201
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0448, Accuracy: 0.6338, Examples: 4961, Krum Score: 2.0240
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.0825, Accuracy: 0.6180, Examples: 4524, Krum Score: 1.8399
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0239, Accuracy: 0.6576, Examples: 5158, Krum Score: 2.0046
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3813, Accuracy: 0.8614, Examples: 5216, Krum Score: 1.2365
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0578, Accuracy: 0.6371, Examples: 4529, Krum Score: 1.9107
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9722, Accuracy: 0.6776, Examples: 5291, Krum Score: 2.1247
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3764, Accuracy: 0.8658, Examples: 4798, Krum Score: 1.2181
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2274, Accuracy: 0.9212, Examples: 4981, Krum Score: 1.0886
+[Round 41] Aggregated training metrics: {'loss': 0.23829150123317458, 'accuracy': 0.9183619550858652}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 41] Evaluation results from clients:
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3949, Accuracy: 0.8587, Examples: 1246
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 6.8248, Accuracy: 0.0597, Examples: 1323
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 6.7151, Accuracy: 0.0530, Examples: 1133
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 5.8529, Accuracy: 0.0566, Examples: 1290
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4410, Accuracy: 0.8469, Examples: 947
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4485, Accuracy: 0.8391, Examples: 1305
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3641, Accuracy: 0.8813, Examples: 1188
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 6.4017, Accuracy: 0.0612, Examples: 1241
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 6.1856, Accuracy: 0.0724, Examples: 1132
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3818, Accuracy: 0.8717, Examples: 1200
+[Round 41] Aggregated evaluation metrics: {'loss': 3.4585459603686375, 'accuracy': 0.4523115368596418}, Aggregated loss: 3.4585
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 42]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 42] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3769, Accuracy: 0.8611, Examples: 5216, Krum Score: 1.2439
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3686, Accuracy: 0.8690, Examples: 4752, Krum Score: 1.2212
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.3996, Accuracy: 0.8661, Examples: 4529, Krum Score: 1.2104
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4044, Accuracy: 0.8587, Examples: 5158, Krum Score: 1.2796
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4220, Accuracy: 0.8422, Examples: 4524, Krum Score: 1.2274
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2214, Accuracy: 0.9239, Examples: 3785, Krum Score: 1.0970
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.3941, Accuracy: 0.8588, Examples: 4961, Krum Score: 1.2573
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2312, Accuracy: 0.9198, Examples: 4981, Krum Score: 1.0956
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3760, Accuracy: 0.8658, Examples: 4798, Krum Score: 1.2122
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3592, Accuracy: 0.8754, Examples: 5291, Krum Score: 1.2304
+[Round 42] Aggregated training metrics: {'loss': 0.23121859956930849, 'accuracy': 0.9197617613598341}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 42] Evaluation results from clients:
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4492, Accuracy: 0.8481, Examples: 1132
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3707, Accuracy: 0.8687, Examples: 1188
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4353, Accuracy: 0.8605, Examples: 1133
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4483, Accuracy: 0.8498, Examples: 1305
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4363, Accuracy: 0.8606, Examples: 947
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3914, Accuracy: 0.8660, Examples: 1246
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3978, Accuracy: 0.8579, Examples: 1323
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5034, Accuracy: 0.8396, Examples: 1241
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4158, Accuracy: 0.8465, Examples: 1290
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3915, Accuracy: 0.8742, Examples: 1200
+[Round 42] Aggregated evaluation metrics: {'loss': 0.42359061803186204, 'accuracy': 0.8569762598917118}, Aggregated loss: 0.4236
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 43]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 43] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3759, Accuracy: 0.8668, Examples: 4798, Krum Score: 1.2574
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3667, Accuracy: 0.8692, Examples: 4752, Krum Score: 1.2615
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9632, Accuracy: 0.6776, Examples: 5291, Krum Score: 2.0142
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0211, Accuracy: 0.6601, Examples: 5158, Krum Score: 2.0384
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.0833, Accuracy: 0.6224, Examples: 4524, Krum Score: 1.8274
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2186, Accuracy: 0.9255, Examples: 4981, Krum Score: 1.1209
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3821, Accuracy: 0.8594, Examples: 5216, Krum Score: 1.2898
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2308, Accuracy: 0.9201, Examples: 3785, Krum Score: 1.1429
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0552, Accuracy: 0.6460, Examples: 4529, Krum Score: 1.9406
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0468, Accuracy: 0.6403, Examples: 4961, Krum Score: 1.8752
+[Round 43] Aggregated training metrics: {'loss': 0.21857579967877971, 'accuracy': 0.925450043498628}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 43] Evaluation results from clients:
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3833, Accuracy: 0.8772, Examples: 1246
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 6.3164, Accuracy: 0.0804, Examples: 1132
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 6.5986, Accuracy: 0.0564, Examples: 1241
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4319, Accuracy: 0.8596, Examples: 947
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3783, Accuracy: 0.8737, Examples: 1188
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 7.0677, Accuracy: 0.0529, Examples: 1323
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4642, Accuracy: 0.8368, Examples: 1305
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3933, Accuracy: 0.8692, Examples: 1200
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 6.9010, Accuracy: 0.0556, Examples: 1133
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 6.0884, Accuracy: 0.0628, Examples: 1290
+[Round 43] Aggregated evaluation metrics: {'loss': 3.5632036601911232, 'accuracy': 0.4543940024989588}, Aggregated loss: 3.5632
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 44]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 44] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4204, Accuracy: 0.8439, Examples: 4524, Krum Score: 1.2826
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.3957, Accuracy: 0.8609, Examples: 4961, Krum Score: 1.3030
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3608, Accuracy: 0.8749, Examples: 5291, Krum Score: 1.2708
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2344, Accuracy: 0.9155, Examples: 3785, Krum Score: 1.1387
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3786, Accuracy: 0.8617, Examples: 5216, Krum Score: 1.2966
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4065, Accuracy: 0.8580, Examples: 5158, Krum Score: 1.3348
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3701, Accuracy: 0.8676, Examples: 4752, Krum Score: 1.2891
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3795, Accuracy: 0.8658, Examples: 4798, Krum Score: 1.2634
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2058, Accuracy: 0.9328, Examples: 4981, Krum Score: 1.1261
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.3995, Accuracy: 0.8669, Examples: 4529, Krum Score: 1.2465
+[Round 44] Aggregated training metrics: {'loss': 0.20580504284745949, 'accuracy': 0.932811349795891}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 44] Evaluation results from clients:
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3837, Accuracy: 0.8708, Examples: 1246
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.3892, Accuracy: 0.8574, Examples: 1290
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4386, Accuracy: 0.8588, Examples: 1133
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3829, Accuracy: 0.8742, Examples: 1200
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3945, Accuracy: 0.8579, Examples: 1323
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4461, Accuracy: 0.8475, Examples: 1305
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.4884, Accuracy: 0.8421, Examples: 1241
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4501, Accuracy: 0.8428, Examples: 1132
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4336, Accuracy: 0.8585, Examples: 947
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3710, Accuracy: 0.8746, Examples: 1188
+[Round 44] Aggregated evaluation metrics: {'loss': 0.4171300533909144, 'accuracy': 0.8583923365264473}, Aggregated loss: 0.4171
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 45]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 45] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3800, Accuracy: 0.8616, Examples: 5216, Krum Score: 1.3141
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0333, Accuracy: 0.6515, Examples: 4961, Krum Score: 1.8162
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3800, Accuracy: 0.8670, Examples: 4798, Krum Score: 1.3010
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.1980, Accuracy: 0.9341, Examples: 4981, Krum Score: 1.1462
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2393, Accuracy: 0.9161, Examples: 3785, Krum Score: 1.1448
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9596, Accuracy: 0.6841, Examples: 5291, Krum Score: 1.9198
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.0803, Accuracy: 0.6263, Examples: 4524, Krum Score: 1.8150
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3718, Accuracy: 0.8695, Examples: 4752, Krum Score: 1.2983
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0273, Accuracy: 0.6643, Examples: 5158, Krum Score: 1.9682
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0490, Accuracy: 0.6529, Examples: 4529, Krum Score: 1.8272
+[Round 45] Aggregated training metrics: {'loss': 0.23932612031388198, 'accuracy': 0.9160722148833114}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 45] Evaluation results from clients:
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4353, Accuracy: 0.8511, Examples: 947
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3825, Accuracy: 0.8796, Examples: 1188
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 6.3889, Accuracy: 0.0866, Examples: 1132
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4001, Accuracy: 0.8740, Examples: 1246
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4003, Accuracy: 0.8700, Examples: 1200
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 7.1605, Accuracy: 0.0499, Examples: 1323
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 6.6518, Accuracy: 0.0612, Examples: 1241
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4894, Accuracy: 0.8314, Examples: 1305
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 6.1138, Accuracy: 0.0643, Examples: 1290
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 6.9686, Accuracy: 0.0627, Examples: 1133
+[Round 45] Aggregated evaluation metrics: {'loss': 3.600735999735034, 'accuracy': 0.4550603915035402}, Aggregated loss: 3.6007
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 46]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 46] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4023, Accuracy: 0.8647, Examples: 4529, Krum Score: 1.2662
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3801, Accuracy: 0.8627, Examples: 5216, Krum Score: 1.3388
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.2032, Accuracy: 0.9325, Examples: 4981, Krum Score: 1.1467
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3800, Accuracy: 0.8653, Examples: 4798, Krum Score: 1.2914
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3705, Accuracy: 0.8678, Examples: 4752, Krum Score: 1.3315
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.3985, Accuracy: 0.8588, Examples: 4961, Krum Score: 1.3310
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3580, Accuracy: 0.8758, Examples: 5291, Krum Score: 1.3074
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4232, Accuracy: 0.8433, Examples: 4524, Krum Score: 1.3038
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4070, Accuracy: 0.8571, Examples: 5158, Krum Score: 1.3649
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2173, Accuracy: 0.9261, Examples: 3785, Krum Score: 1.1512
+[Round 46] Aggregated training metrics: {'loss': 0.20318482338660196, 'accuracy': 0.9325436659305361}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 46] Evaluation results from clients:
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3927, Accuracy: 0.8725, Examples: 1200
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4528, Accuracy: 0.8544, Examples: 1133
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4619, Accuracy: 0.8479, Examples: 947
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.4081, Accuracy: 0.8564, Examples: 1323
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4526, Accuracy: 0.8483, Examples: 1305
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5030, Accuracy: 0.8437, Examples: 1241
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4189, Accuracy: 0.8488, Examples: 1290
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4007, Accuracy: 0.8620, Examples: 1246
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4442, Accuracy: 0.8472, Examples: 1132
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3738, Accuracy: 0.8678, Examples: 1188
+[Round 46] Aggregated evaluation metrics: {'loss': 0.43006744987266554, 'accuracy': 0.8549770928779675}, Aggregated loss: 0.4301
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 47]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 47] Krum selected client: e060b43b6a7049fabd3261b79c380fdb
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2277, Accuracy: 0.9207, Examples: 3785, Krum Score: 1.1712
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3809, Accuracy: 0.8666, Examples: 4798, Krum Score: 1.3248
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9549, Accuracy: 0.6879, Examples: 5291, Krum Score: 1.9495
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.1932, Accuracy: 0.9367, Examples: 4981, Krum Score: 1.1752
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3829, Accuracy: 0.8611, Examples: 5216, Krum Score: 1.3580
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.0783, Accuracy: 0.6317, Examples: 4524, Krum Score: 1.7781
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3704, Accuracy: 0.8681, Examples: 4752, Krum Score: 1.3349
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0480, Accuracy: 0.6561, Examples: 4529, Krum Score: 1.8165
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0255, Accuracy: 0.6677, Examples: 5158, Krum Score: 1.9884
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0339, Accuracy: 0.6500, Examples: 4961, Krum Score: 1.8507
+[Round 47] Aggregated training metrics: {'loss': 0.22765302097466691, 'accuracy': 0.9206516952884193}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 47] Evaluation results from clients:
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 6.1553, Accuracy: 0.0760, Examples: 1290
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.5112, Accuracy: 0.8342, Examples: 947
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 7.1837, Accuracy: 0.0620, Examples: 1323
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 7.1584, Accuracy: 0.0635, Examples: 1133
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 6.8224, Accuracy: 0.0612, Examples: 1241
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4796, Accuracy: 0.8398, Examples: 1305
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3809, Accuracy: 0.8704, Examples: 1188
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 6.6392, Accuracy: 0.0671, Examples: 1132
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.4111, Accuracy: 0.8625, Examples: 1200
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.4253, Accuracy: 0.8531, Examples: 1246
+[Round 47] Aggregated evaluation metrics: {'loss': 3.67535235605504, 'accuracy': 0.4516451478550604}, Aggregated loss: 3.6754
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 48]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 48] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4023, Accuracy: 0.8664, Examples: 4529, Krum Score: 1.3078
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.1959, Accuracy: 0.9363, Examples: 4981, Krum Score: 1.1691
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3693, Accuracy: 0.8704, Examples: 4752, Krum Score: 1.3362
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3617, Accuracy: 0.8744, Examples: 5291, Krum Score: 1.3371
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3802, Accuracy: 0.8605, Examples: 5216, Krum Score: 1.3537
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3782, Accuracy: 0.8649, Examples: 4798, Krum Score: 1.3222
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4255, Accuracy: 0.8436, Examples: 4524, Krum Score: 1.3435
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4114, Accuracy: 0.8589, Examples: 5158, Krum Score: 1.3905
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2059, Accuracy: 0.9308, Examples: 3785, Krum Score: 1.1866
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.3936, Accuracy: 0.8619, Examples: 4961, Krum Score: 1.3584
+[Round 48] Aggregated training metrics: {'loss': 0.19591750752026002, 'accuracy': 0.9362912400455063}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 48] Evaluation results from clients:
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3990, Accuracy: 0.8708, Examples: 1200
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4427, Accuracy: 0.8564, Examples: 947
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3725, Accuracy: 0.8754, Examples: 1188
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4733, Accuracy: 0.8460, Examples: 1305
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4580, Accuracy: 0.8463, Examples: 1132
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3916, Accuracy: 0.8740, Examples: 1246
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.3993, Accuracy: 0.8597, Examples: 1290
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5013, Accuracy: 0.8413, Examples: 1241
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4437, Accuracy: 0.8588, Examples: 1133
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3926, Accuracy: 0.8632, Examples: 1323
+[Round 48] Aggregated evaluation metrics: {'loss': 0.4268104596318726, 'accuracy': 0.8592253227821741}, Aggregated loss: 0.4268
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 49]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 49] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3695, Accuracy: 0.8685, Examples: 4752, Krum Score: 1.3587
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2152, Accuracy: 0.9255, Examples: 3785, Krum Score: 1.1933
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 1.0189, Accuracy: 0.6707, Examples: 5158, Krum Score: 1.9812
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3831, Accuracy: 0.8620, Examples: 5216, Krum Score: 1.3824
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3824, Accuracy: 0.8658, Examples: 4798, Krum Score: 1.3628
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 1.0698, Accuracy: 0.6370, Examples: 4524, Krum Score: 1.8207
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.9512, Accuracy: 0.6880, Examples: 5291, Krum Score: 1.9810
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.1828, Accuracy: 0.9411, Examples: 4981, Krum Score: 1.1886
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 1.0438, Accuracy: 0.6578, Examples: 4529, Krum Score: 1.8031
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 1.0252, Accuracy: 0.6561, Examples: 4961, Krum Score: 1.8700
+[Round 49] Aggregated training metrics: {'loss': 0.18283755847534677, 'accuracy': 0.9411095496218965}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 49] Evaluation results from clients:
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3742, Accuracy: 0.8779, Examples: 1188
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3868, Accuracy: 0.8742, Examples: 1200
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 7.4033, Accuracy: 0.0574, Examples: 1323
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 7.2955, Accuracy: 0.0591, Examples: 1133
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 6.6273, Accuracy: 0.0716, Examples: 1132
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4518, Accuracy: 0.8483, Examples: 1305
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3889, Accuracy: 0.8756, Examples: 1246
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 6.4101, Accuracy: 0.0651, Examples: 1290
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4376, Accuracy: 0.8691, Examples: 947
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 6.9562, Accuracy: 0.0548, Examples: 1241
+[Round 49] Aggregated evaluation metrics: {'loss': 3.736880993982098, 'accuracy': 0.45722615576842984}, Aggregated loss: 3.7369
+
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 50]
+[92mINFO [0m:      configure_fit: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_fit: received 10 results and 0 failures
+
+[Round 50] Krum selected client: 5b26fef113e64ccea57f3de25b7cd1ac
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4159, Accuracy: 0.8582, Examples: 5158, Krum Score: 1.4542
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4323, Accuracy: 0.8470, Examples: 4524, Krum Score: 1.3774
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.2185, Accuracy: 0.9233, Examples: 3785, Krum Score: 1.2050
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.1755, Accuracy: 0.9422, Examples: 4981, Krum Score: 1.1926
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3812, Accuracy: 0.8664, Examples: 4798, Krum Score: 1.3710
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3734, Accuracy: 0.8680, Examples: 4752, Krum Score: 1.4014
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3628, Accuracy: 0.8763, Examples: 5291, Krum Score: 1.3794
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4041, Accuracy: 0.8669, Examples: 4529, Krum Score: 1.3403
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.3985, Accuracy: 0.8625, Examples: 4961, Krum Score: 1.4079
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.3843, Accuracy: 0.8627, Examples: 5216, Krum Score: 1.3955
+[Round 50] Aggregated training metrics: {'loss': 0.17545100662340996, 'accuracy': 0.9422472060496553}
+
+[92mINFO [0m:      configure_evaluate: strategy sampled 10 clients (out of 10)
+[92mINFO [0m:      aggregate_evaluate: received 10 results and 0 failures
+
+[Round 50] Evaluation results from clients:
+ - Client 96b1573fa49f4e0f99050f376d895102: Loss: 0.4535, Accuracy: 0.8605, Examples: 1133
+ - Client e060b43b6a7049fabd3261b79c380fdb: Loss: 0.4465, Accuracy: 0.8543, Examples: 947
+ - Client 0aa3d744a39641c8978d2e5156dac792: Loss: 0.4642, Accuracy: 0.8454, Examples: 1132
+ - Client 2491293fa8564123b53301a511e990cf: Loss: 0.3717, Accuracy: 0.8746, Examples: 1188
+ - Client 05df5fc648994197b042bc775dcada44: Loss: 0.4045, Accuracy: 0.8543, Examples: 1290
+ - Client 5b26fef113e64ccea57f3de25b7cd1ac: Loss: 0.3872, Accuracy: 0.8748, Examples: 1246
+ - Client 038d0a73c72d469f92846bf1baade3cd: Loss: 0.3891, Accuracy: 0.8617, Examples: 1323
+ - Client 4abfe0f5ef724f5c97c858fce066e98f: Loss: 0.3989, Accuracy: 0.8700, Examples: 1200
+ - Client 39e0ed040e624e52a868084e82931d1c: Loss: 0.5041, Accuracy: 0.8429, Examples: 1241
+ - Client fc99ccad36094b649962fbf4f878472e: Loss: 0.4729, Accuracy: 0.8460, Examples: 1305
+[Round 50] Aggregated evaluation metrics: {'loss': 0.4284957841206272, 'accuracy': 0.85847563515202}, Aggregated loss: 0.4285
+
+[92mINFO [0m:      
+[92mINFO [0m:      [SUMMARY]
+[92mINFO [0m:      Run finished 50 round(s) in 336.07s
+[92mINFO [0m:      	History (loss, distributed):
+[92mINFO [0m:      		round 1: 1.4629617581164922
+[92mINFO [0m:      		round 2: 0.8860649466713186
+[92mINFO [0m:      		round 3: 1.618944029016626
+[92mINFO [0m:      		round 4: 0.6324023360066094
+[92mINFO [0m:      		round 5: 1.982694806495541
+[92mINFO [0m:      		round 6: 0.5561488284611891
+[92mINFO [0m:      		round 7: 2.1878411477727226
+[92mINFO [0m:      		round 8: 0.5192171838992539
+[92mINFO [0m:      		round 9: 2.360757160633616
+[92mINFO [0m:      		round 10: 0.5211072300658133
+[92mINFO [0m:      		round 11: 2.450060509677134
+[92mINFO [0m:      		round 12: 0.4692384092820679
+[92mINFO [0m:      		round 13: 2.5625557080252577
+[92mINFO [0m:      		round 14: 0.48569514773032013
+[92mINFO [0m:      		round 15: 2.6696589270639994
+[92mINFO [0m:      		round 16: 0.4628404863473526
+[92mINFO [0m:      		round 17: 2.7573327802236456
+[92mINFO [0m:      		round 18: 0.4410043190911828
+[92mINFO [0m:      		round 19: 2.82948114127231
+[92mINFO [0m:      		round 20: 0.4423047321779139
+[92mINFO [0m:      		round 21: 2.9086635426226777
+[92mINFO [0m:      		round 22: 0.43460011542563337
+[92mINFO [0m:      		round 23: 2.987326015459404
+[92mINFO [0m:      		round 24: 0.4279681916288513
+[92mINFO [0m:      		round 25: 3.0233286528277525
+[92mINFO [0m:      		round 26: 0.427018115116824
+[92mINFO [0m:      		round 27: 3.0480753230283977
+[92mINFO [0m:      		round 28: 0.4286880157630377
+[92mINFO [0m:      		round 29: 3.0919579307842335
+[92mINFO [0m:      		round 30: 0.4198038888767033
+[92mINFO [0m:      		round 31: 3.186648388881576
+[92mINFO [0m:      		round 32: 0.44041540433297005
+[92mINFO [0m:      		round 33: 3.199218261716069
+[92mINFO [0m:      		round 34: 0.42376010373501616
+[92mINFO [0m:      		round 35: 3.355369380249276
+[92mINFO [0m:      		round 36: 0.4166991531253109
+[92mINFO [0m:      		round 37: 3.3436578093469764
+[92mINFO [0m:      		round 38: 0.4106041365069978
+[92mINFO [0m:      		round 39: 3.391067466505961
+[92mINFO [0m:      		round 40: 0.4193025190077539
+[92mINFO [0m:      		round 41: 3.4585459603686375
+[92mINFO [0m:      		round 42: 0.42359061803186204
+[92mINFO [0m:      		round 43: 3.5632036601911232
+[92mINFO [0m:      		round 44: 0.4171300533909144
+[92mINFO [0m:      		round 45: 3.600735999735034
+[92mINFO [0m:      		round 46: 0.43006744987266554
+[92mINFO [0m:      		round 47: 3.67535235605504
+[92mINFO [0m:      		round 48: 0.4268104596318726
+[92mINFO [0m:      		round 49: 3.736880993982098
+[92mINFO [0m:      		round 50: 0.4284957841206272
+[92mINFO [0m:      	History (metrics, distributed, fit):
+[92mINFO [0m:      	{'accuracy': [(1, 0.5112975638477957),
+[92mINFO [0m:      	              (2, 0.5171000470335282),
+[92mINFO [0m:      	              (3, 0.7391420732115371),
+[92mINFO [0m:      	              (4, 0.7798969417118383),
+[92mINFO [0m:      	              (5, 0.791510351535362),
+[92mINFO [0m:      	              (6, 0.8126882152178277),
+[92mINFO [0m:      	              (7, 0.8103038309114927),
+[92mINFO [0m:      	              (8, 0.8324299002877602),
+[92mINFO [0m:      	              (9, 0.8287098194627918),
+[92mINFO [0m:      	              (10, 0.8356671070013211),
+[92mINFO [0m:      	              (11, 0.8461470717745486),
+[92mINFO [0m:      	              (12, 0.8507662450645787),
+[92mINFO [0m:      	              (13, 0.8528401585204755),
+[92mINFO [0m:      	              (14, 0.860413914575077),
+[92mINFO [0m:      	              (15, 0.867107001321004),
+[92mINFO [0m:      	              (16, 0.8699251431087628),
+[92mINFO [0m:      	              (17, 0.8756494936151475),
+[92mINFO [0m:      	              (18, 0.8600682593856656),
+[92mINFO [0m:      	              (19, 0.8771466314398942),
+[92mINFO [0m:      	              (20, 0.8662249882888308),
+[92mINFO [0m:      	              (21, 0.8839277851166886),
+[92mINFO [0m:      	              (22, 0.8869220607661824),
+[92mINFO [0m:      	              (23, 0.8913254073095552),
+[92mINFO [0m:      	              (24, 0.8697717995047848),
+[92mINFO [0m:      	              (25, 0.8948480845442536),
+[92mINFO [0m:      	              (26, 0.8778023154654354),
+[92mINFO [0m:      	              (27, 0.8834905976042293),
+[92mINFO [0m:      	              (28, 0.8899819313390885),
+[92mINFO [0m:      	              (29, 0.8954645530603257),
+[92mINFO [0m:      	              (30, 0.8929933748243325),
+[92mINFO [0m:      	              (31, 0.8993508666265141),
+[92mINFO [0m:      	              (32, 0.9036338084721942),
+[92mINFO [0m:      	              (33, 0.8974020255394098),
+[92mINFO [0m:      	              (34, 0.9039014923375494),
+[92mINFO [0m:      	              (35, 0.9040070453544694),
+[92mINFO [0m:      	              (36, 0.9073813825871646),
+[92mINFO [0m:      	              (37, 0.9083223249669748),
+[92mINFO [0m:      	              (38, 0.9121996921635548),
+[92mINFO [0m:      	              (39, 0.913518273888155),
+[92mINFO [0m:      	              (40, 0.9160141872448638),
+[92mINFO [0m:      	              (41, 0.9183619550858652),
+[92mINFO [0m:      	              (42, 0.9197617613598341),
+[92mINFO [0m:      	              (43, 0.925450043498628),
+[92mINFO [0m:      	              (44, 0.932811349795891),
+[92mINFO [0m:      	              (45, 0.9160722148833114),
+[92mINFO [0m:      	              (46, 0.9325436659305361),
+[92mINFO [0m:      	              (47, 0.9206516952884193),
+[92mINFO [0m:      	              (48, 0.9362912400455063),
+[92mINFO [0m:      	              (49, 0.9411095496218965),
+[92mINFO [0m:      	              (50, 0.9422472060496553)],
+[92mINFO [0m:      	 'loss': [(1, 1.6195223526667923),
+[92mINFO [0m:      	          (2, 1.121135712270654),
+[92mINFO [0m:      	          (3, 0.7429450433001991),
+[92mINFO [0m:      	          (4, 0.6239444698557782),
+[92mINFO [0m:      	          (5, 0.58122489348673),
+[92mINFO [0m:      	          (6, 0.5244803795140885),
+[92mINFO [0m:      	          (7, 0.5269891065996893),
+[92mINFO [0m:      	          (8, 0.4735888833981445),
+[92mINFO [0m:      	          (9, 0.4788504008520336),
+[92mINFO [0m:      	          (10, 0.4560486167997371),
+[92mINFO [0m:      	          (11, 0.4365844379406782),
+[92mINFO [0m:      	          (12, 0.42600946278048113),
+[92mINFO [0m:      	          (13, 0.41228849423818786),
+[92mINFO [0m:      	          (14, 0.39317207540619586),
+[92mINFO [0m:      	          (15, 0.37787744577421273),
+[92mINFO [0m:      	          (16, 0.3635045436111278),
+[92mINFO [0m:      	          (17, 0.3519327343848769),
+[92mINFO [0m:      	          (18, 0.3927847651152345),
+[92mINFO [0m:      	          (19, 0.3394190513670366),
+[92mINFO [0m:      	          (20, 0.37361982393989135),
+[92mINFO [0m:      	          (21, 0.3280938275253547),
+[92mINFO [0m:      	          (22, 0.31366616619257925),
+[92mINFO [0m:      	          (23, 0.3024132071836359),
+[92mINFO [0m:      	          (24, 0.35994370116161106),
+[92mINFO [0m:      	          (25, 0.29635059723030993),
+[92mINFO [0m:      	          (26, 0.3415177847110849),
+[92mINFO [0m:      	          (27, 0.3247200106919103),
+[92mINFO [0m:      	          (28, 0.30976329658102947),
+[92mINFO [0m:      	          (29, 0.2926213451566438),
+[92mINFO [0m:      	          (30, 0.298753735870432),
+[92mINFO [0m:      	          (31, 0.2846451241485383),
+[92mINFO [0m:      	          (32, 0.2752279131380037),
+[92mINFO [0m:      	          (33, 0.28640825885053983),
+[92mINFO [0m:      	          (34, 0.26823190097938715),
+[92mINFO [0m:      	          (35, 0.27197673945752915),
+[92mINFO [0m:      	          (36, 0.26098548551583994),
+[92mINFO [0m:      	          (37, 0.2593895887656655),
+[92mINFO [0m:      	          (38, 0.24961359622702975),
+[92mINFO [0m:      	          (39, 0.2502214216388096),
+[92mINFO [0m:      	          (40, 0.2388972381962149),
+[92mINFO [0m:      	          (41, 0.23829150123317458),
+[92mINFO [0m:      	          (42, 0.23121859956930849),
+[92mINFO [0m:      	          (43, 0.21857579967877971),
+[92mINFO [0m:      	          (44, 0.20580504284745949),
+[92mINFO [0m:      	          (45, 0.23932612031388198),
+[92mINFO [0m:      	          (46, 0.20318482338660196),
+[92mINFO [0m:      	          (47, 0.22765302097466691),
+[92mINFO [0m:      	          (48, 0.19591750752026002),
+[92mINFO [0m:      	          (49, 0.18283755847534677),
+[92mINFO [0m:      	          (50, 0.17545100662340996)]}
+[92mINFO [0m:      	History (metrics, distributed, evaluate):
+[92mINFO [0m:      	{'accuracy': [(1, 0.3935860058309038),
+[92mINFO [0m:      	              (2, 0.6376509787588505),
+[92mINFO [0m:      	              (3, 0.4231570179092045),
+[92mINFO [0m:      	              (4, 0.7719283631820075),
+[92mINFO [0m:      	              (5, 0.4346522282382341),
+[92mINFO [0m:      	              (6, 0.8009995835068722),
+[92mINFO [0m:      	              (7, 0.4329862557267805),
+[92mINFO [0m:      	              (8, 0.8102457309454394),
+[92mINFO [0m:      	              (9, 0.44381507705122863),
+[92mINFO [0m:      	              (10, 0.8081632653061225),
+[92mINFO [0m:      	              (11, 0.44406497292794667),
+[92mINFO [0m:      	              (12, 0.831820074968763),
+[92mINFO [0m:      	              (13, 0.43881715951686795),
+[92mINFO [0m:      	              (14, 0.8195751770095794),
+[92mINFO [0m:      	              (15, 0.44381507705122863),
+[92mINFO [0m:      	              (16, 0.8333194502290712),
+[92mINFO [0m:      	              (17, 0.44847980008329863),
+[92mINFO [0m:      	              (18, 0.8391503540191587),
+[92mINFO [0m:      	              (19, 0.4443148688046647),
+[92mINFO [0m:      	              (20, 0.8399833402748854),
+[92mINFO [0m:      	              (21, 0.44756351520199916),
+[92mINFO [0m:      	              (22, 0.8444814660558101),
+[92mINFO [0m:      	              (23, 0.45022907122032485),
+[92mINFO [0m:      	              (24, 0.846314035818409),
+[92mINFO [0m:      	              (25, 0.45289462723865054),
+[92mINFO [0m:      	              (26, 0.8479800083298625),
+[92mINFO [0m:      	              (27, 0.4543940024989588),
+[92mINFO [0m:      	              (28, 0.8483132028321533),
+[92mINFO [0m:      	              (29, 0.4528113286130779),
+[92mINFO [0m:      	              (30, 0.8511453561016243),
+[92mINFO [0m:      	              (31, 0.4553935860058309),
+[92mINFO [0m:      	              (32, 0.8453144523115369),
+[92mINFO [0m:      	              (33, 0.45372761349437735),
+[92mINFO [0m:      	              (34, 0.8518950437317784),
+[92mINFO [0m:      	              (35, 0.44914618908788007),
+[92mINFO [0m:      	              (36, 0.8563098708871304),
+[92mINFO [0m:      	              (37, 0.45481049562682213),
+[92mINFO [0m:      	              (38, 0.8575593502707205),
+[92mINFO [0m:      	              (39, 0.45314452311536857),
+[92mINFO [0m:      	              (40, 0.8567263640149938),
+[92mINFO [0m:      	              (41, 0.4523115368596418),
+[92mINFO [0m:      	              (42, 0.8569762598917118),
+[92mINFO [0m:      	              (43, 0.4543940024989588),
+[92mINFO [0m:      	              (44, 0.8583923365264473),
+[92mINFO [0m:      	              (45, 0.4550603915035402),
+[92mINFO [0m:      	              (46, 0.8549770928779675),
+[92mINFO [0m:      	              (47, 0.4516451478550604),
+[92mINFO [0m:      	              (48, 0.8592253227821741),
+[92mINFO [0m:      	              (49, 0.45722615576842984),
+[92mINFO [0m:      	              (50, 0.85847563515202)],
+[92mINFO [0m:      	 'loss': [(1, 1.4629617581164922),
+[92mINFO [0m:      	          (2, 0.8860649466713186),
+[92mINFO [0m:      	          (3, 1.618944029016626),
+[92mINFO [0m:      	          (4, 0.6324023360066094),
+[92mINFO [0m:      	          (5, 1.982694806495541),
+[92mINFO [0m:      	          (6, 0.5561488284611891),
+[92mINFO [0m:      	          (7, 2.1878411477727226),
+[92mINFO [0m:      	          (8, 0.5192171838992539),
+[92mINFO [0m:      	          (9, 2.360757160633616),
+[92mINFO [0m:      	          (10, 0.5211072300658133),
+[92mINFO [0m:      	          (11, 2.450060509677134),
+[92mINFO [0m:      	          (12, 0.4692384092820679),
+[92mINFO [0m:      	          (13, 2.5625557080252577),
+[92mINFO [0m:      	          (14, 0.48569514773032013),
+[92mINFO [0m:      	          (15, 2.6696589270639994),
+[92mINFO [0m:      	          (16, 0.4628404863473526),
+[92mINFO [0m:      	          (17, 2.7573327802236456),
+[92mINFO [0m:      	          (18, 0.4410043190911828),
+[92mINFO [0m:      	          (19, 2.82948114127231),
+[92mINFO [0m:      	          (20, 0.4423047321779139),
+[92mINFO [0m:      	          (21, 2.9086635426226777),
+[92mINFO [0m:      	          (22, 0.43460011542563337),
+[92mINFO [0m:      	          (23, 2.987326015459404),
+[92mINFO [0m:      	          (24, 0.4279681916288513),
+[92mINFO [0m:      	          (25, 3.0233286528277525),
+[92mINFO [0m:      	          (26, 0.427018115116824),
+[92mINFO [0m:      	          (27, 3.0480753230283977),
+[92mINFO [0m:      	          (28, 0.4286880157630377),
+[92mINFO [0m:      	          (29, 3.0919579307842335),
+[92mINFO [0m:      	          (30, 0.4198038888767033),
+[92mINFO [0m:      	          (31, 3.186648388881576),
+[92mINFO [0m:      	          (32, 0.44041540433297005),
+[92mINFO [0m:      	          (33, 3.199218261716069),
+[92mINFO [0m:      	          (34, 0.42376010373501616),
+[92mINFO [0m:      	          (35, 3.355369380249276),
+[92mINFO [0m:      	          (36, 0.4166991531253109),
+[92mINFO [0m:      	          (37, 3.3436578093469764),
+[92mINFO [0m:      	          (38, 0.4106041365069978),
+[92mINFO [0m:      	          (39, 3.391067466505961),
+[92mINFO [0m:      	          (40, 0.4193025190077539),
+[92mINFO [0m:      	          (41, 3.4585459603686375),
+[92mINFO [0m:      	          (42, 0.42359061803186204),
+[92mINFO [0m:      	          (43, 3.5632036601911232),
+[92mINFO [0m:      	          (44, 0.4171300533909144),
+[92mINFO [0m:      	          (45, 3.600735999735034),
+[92mINFO [0m:      	          (46, 0.43006744987266554),
+[92mINFO [0m:      	          (47, 3.67535235605504),
+[92mINFO [0m:      	          (48, 0.4268104596318726),
+[92mINFO [0m:      	          (49, 3.736880993982098),
+[92mINFO [0m:      	          (50, 0.4284957841206272)]}
+[92mINFO [0m:      
+[CustomClientManager] Client 5b26fef113e64ccea57f3de25b7cd1ac unregistered.
+[CustomClientManager] Client 0aa3d744a39641c8978d2e5156dac792 unregistered.
+[CustomClientManager] Client e060b43b6a7049fabd3261b79c380fdb unregistered.
+[CustomClientManager] Client 4abfe0f5ef724f5c97c858fce066e98f unregistered.
+[CustomClientManager] Client 038d0a73c72d469f92846bf1baade3cd unregistered.
+[CustomClientManager] Client 05df5fc648994197b042bc775dcada44 unregistered.
+[CustomClientManager] Client 96b1573fa49f4e0f99050f376d895102 unregistered.
+[CustomClientManager] Client 39e0ed040e624e52a868084e82931d1c unregistered.
+[CustomClientManager] Client 2491293fa8564123b53301a511e990cf unregistered.
+[CustomClientManager] Client fc99ccad36094b649962fbf4f878472e unregistered.
+Saved training history to fl_history.json
+Appended metadata and full eval loss list to plot1.json
+Appended metadata and results to plot2.json
